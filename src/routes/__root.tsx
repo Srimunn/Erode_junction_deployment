@@ -7,12 +7,15 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { SplashIntro } from "../components/site/SplashIntro";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
+import { useLocation } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -80,10 +83,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Junior Junction Play School — Erode" },
-      { name: "description", content: "A joyful preschool in Erode nurturing creativity, confidence and happy learning for little minds." },
+      {
+        name: "description",
+        content:
+          "A joyful preschool in Erode nurturing creativity, confidence and happy learning for little minds.",
+      },
       { name: "author", content: "Junior Junction Play School" },
       { property: "og:title", content: "Junior Junction Play School — Erode" },
-      { property: "og:description", content: "Where Little Minds Learn, Play & Grow. Admissions Open 2026." },
+      {
+        property: "og:description",
+        content: "Where Little Minds Learn, Play & Grow. Admissions Open 2026.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -97,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap",
       },
     ],
   }),
@@ -123,14 +133,60 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const location = useLocation();
+  const isContact = location.pathname === "/contact";
+
+  // Only show the splash when the page was loaded via a full reload.
+  const [showSplash, setShowSplash] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // Prefer the modern Navigation Timing Level 2 API
+    try {
+      const navs = window.performance.getEntriesByType("navigation");
+      if (navs.length > 0 && (navs[0] as any).type === "reload" && window.location.pathname === "/") {
+        setShowSplash(true);
+      } else if ((window.performance as any).navigation) {
+        // Fallback for older browsers
+        // performance.navigation.type === 1 indicates a reload
+        if (((window.performance as any).navigation.type as number) === 1 && window.location.pathname === "/") {
+          setShowSplash(true);
+        }
+      }
+    } catch (e) {
+      // If anything goes wrong, do not show the splash by default.
+      // This preserves the behavior of not showing it on client navigation.
+    }
+  }, []);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Navbar />
-      <main className="min-h-screen">
-        <Outlet />
-      </main>
-      <Footer />
+      <AnimatePresence mode="wait">
+        {showSplash ? (
+          <SplashIntro key="splash" onComplete={handleSplashComplete} />
+        ) : (
+          <motion.div
+            key="app-content"
+            initial={{ opacity: 0, filter: "blur(20px)", scale: 1.04 }}
+            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className={`min-h-screen flex flex-col ${
+              isContact ? "bg-gradient-to-tr from-[#EEF8FF] via-white to-[#F5FBFF]" : ""
+            }`}
+          >
+            <Navbar />
+            <main className="flex-1">
+              <Outlet />
+            </main>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </QueryClientProvider>
   );
 }

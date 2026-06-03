@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { Sparkles, ArrowRight, Heart } from "lucide-react";
 import img1 from "@/assets/hero-1-learning.jpg";
 import img2 from "@/assets/hero-2-play.jpg";
 import img3 from "@/assets/hero-3-art.jpg";
@@ -9,150 +11,206 @@ import img6 from "@/assets/hero-6-story.jpg";
 import img7 from "@/assets/hero-7-digital.jpg";
 import img8 from "@/assets/hero-8-sports.jpg";
 
+import cardImg1 from "@/assets/one.jpg";
+import cardImg2 from "@/assets/two.jpg";
+import cardImg3 from "@/assets/three.jpg";
+
 const slides = [
-  { src: img1, label: "Kids Learning" },
-  { src: img2, label: "Play Time" },
-  { src: img3, label: "Art & Craft" },
-  { src: img4, label: "Dance & Music" },
-  { src: img5, label: "Outdoor Activities" },
-  { src: img6, label: "Story Time" },
-  { src: img7, label: "Digital Classroom" },
-  { src: img8, label: "Sports & Games" },
+  { src: img1, label: "Diwali Delight" },
+  { src: img2, label: "Messy Play Magic" },
+  { src: img3, label: "Happy Beginnings" },
+  { src: img4, label: "Confident Voices" },
+  { src: img5, label: "Creative Play Time" },
+  { src: img6, label: "Joyful Moves" },
+  { src: img7, label: "Little Learners" },
+  { src: img8, label: "Pretty in Pink" },
 ];
 
-function RotatingBadge() {
-  const text = "LEARN • PLAY • GROW • JUNIOR JUNCTION • ";
-  const chars = text.split("");
-  const radius = 46;
-  return (
-    <div className="relative h-28 w-28">
-      <div className="animate-spin-slow absolute inset-0">
-        {chars.map((c, i) => {
-          const angle = (i / chars.length) * 360;
-          return (
-            <span
-              key={i}
-              className="absolute left-1/2 top-1/2 text-[10px] font-semibold tracking-[0.2em] text-foreground/70"
-              style={{
-                transform: `translate(-50%, -50%) rotate(${angle}deg) translateY(-${radius}px)`,
-              }}
-            >
-              {c}
-            </span>
-          );
-        })}
-      </div>
-      <div className="absolute inset-0 grid place-items-center">
-        <span className="grid h-10 w-10 place-items-center rounded-full bg-accent-red text-primary-foreground">
-          <Sparkles className="h-4 w-4" />
-        </span>
-      </div>
-    </div>
-  );
-}
-
 export function Hero() {
-  // Duplicate slides for seamless marquee loop
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 12;
+      const y = (e.clientY / window.innerHeight - 0.5) * 12;
+      setMousePos({ x, y });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   const loop = [...slides, ...slides];
 
+  // Animation variants for staggered load
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.15,
+      },
+    },
+  } as const;
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 100,
+        damping: 18,
+      },
+    },
+  } as const;
+
   return (
-    <section className="relative px-4 pt-32 pb-16 sm:pt-36">
-      {/* decorative shapes */}
-      <div className="pointer-events-none absolute left-10 top-32 h-24 w-24 rounded-full bg-accent-red/10 blur-2xl" />
-      <div className="pointer-events-none absolute right-12 top-40 h-32 w-32 rounded-full bg-accent-blue/10 blur-2xl" />
+    <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:pt-36 bg-white min-h-screen flex flex-col justify-center items-center">
+      {/* Soft Background Breathing Radial Gradient */}
+      <div
+        className="absolute inset-0 -z-10 bg-gradient-to-tr from-accent-blue/[0.015] via-white to-accent-red/[0.015] animate-pulse"
+        style={{ animationDuration: "10s" }}
+      />
 
-      <div className="mx-auto max-w-6xl">
-        <div className="relative overflow-hidden rounded-[44px] border border-white/70 bg-card/80 px-6 pb-10 pt-12 shadow-float backdrop-blur-xl sm:px-10 sm:pt-16">
-          {/* top pill */}
-          <div className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-border/70 bg-background/80 px-4 py-1.5 text-xs font-medium text-foreground/70 animate-fade-up">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-red" />
-            Admissions Open 2026 · Erode
-          </div>
+      {/* Playful Floating Background Shapes (Extremely Subtle) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10 select-none opacity-40">
+        {/* Floating Sparkle Left */}
+        <div className="absolute top-[22%] left-[10%] animate-float text-accent-blue/15">
+          <Sparkles className="h-8 w-8" />
+        </div>
 
-          <h1 className="mx-auto max-w-3xl text-center text-4xl leading-[1.05] sm:text-6xl animate-fade-up">
-            Where Little Minds{" "}
-            <span className="italic text-accent-red">Learn</span>,{" "}
-            <span className="italic text-accent-blue">Play</span> & Grow
-          </h1>
+        {/* Floating Heart Right */}
+        <div className="absolute top-[26%] right-[12%] animate-float-slow text-accent-red/15">
+          <Heart className="h-9 w-9" />
+        </div>
 
-          <p className="mx-auto mt-5 max-w-xl text-center text-base text-muted-foreground sm:text-lg">
-            A joyful preschool nurturing creativity, confidence and happy
-            learning — every single day.
-          </p>
+        {/* Soft Background Gradients */}
+        <div className="absolute top-1/4 left-1/4 h-[350px] w-[350px] rounded-full bg-accent-blue/[0.02] blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 h-[350px] w-[350px] rounded-full bg-accent-red/[0.02] blur-3xl" />
+      </div>
 
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              to="/contact"
-              className="rounded-full bg-accent-red px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-transform hover:scale-[1.03]"
+      {/* Main Centered Hero Container */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="mx-auto max-w-[1280px] w-full px-4 md:px-8 flex flex-col items-center justify-center transition-transform duration-300 ease-out"
+        style={{
+          transform: `perspective(1000px) rotateY(${mousePos.x * 0.05}deg) rotateX(${mousePos.y * -0.05}deg)`,
+        }}
+      >
+        {/* Responsive Grid layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full mb-16">
+          {/* Left Column: Left-aligned Typography */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+
+
+            {/* Clean Premium Heading */}
+            <motion.h1
+              variants={itemVariants}
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight font-sans mb-6 text-foreground/95 select-none"
             >
-              Admissions Open
-            </Link>
-            <Link
-              to="/contact"
-              className="rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent-blue hover:text-accent-blue"
-            >
-              Schedule Visit
-            </Link>
-          </div>
-
-          {/* Rotating image strip */}
-          <div className="relative mt-12 -mx-6 sm:-mx-10">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-card to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-card to-transparent" />
-            <div className="overflow-hidden">
-              <div className="animate-marquee flex w-max gap-5 px-6 sm:gap-6 sm:px-10">
-                {loop.map((s, i) => (
-                  <figure
-                    key={i}
-                    className="group relative w-[calc(50vw-2rem)] max-w-[230px] shrink-0 overflow-hidden rounded-3xl shadow-card sm:w-[230px] md:w-[240px]"
-                  >
-                    <img
-                      src={s.src}
-                      alt={s.label}
-                      width={768}
-                      height={1024}
-                      loading={i < 4 ? "eager" : "lazy"}
-                      className="aspect-[3/4] h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <figcaption className="absolute inset-x-3 bottom-3 rounded-full bg-white/85 px-3 py-1.5 text-center text-[11px] font-semibold tracking-wide text-foreground backdrop-blur">
-                      {s.label}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom row */}
-          <div className="mt-10 grid grid-cols-1 items-center gap-6 sm:grid-cols-3">
-            <div className="flex items-center gap-3">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="h-9 w-9 rounded-full border-2 border-card bg-gradient-to-br from-accent-red/30 to-accent-blue/30"
-                  />
-                ))}
-              </div>
-              <div>
-                <div className="text-sm font-semibold">500+ Happy Parents</div>
-                <div className="text-xs text-muted-foreground">trust Junior Junction</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                Explore More
+              Where Little Minds <br />
+              <span className="relative mt-2 inline-block font-extrabold bg-gradient-to-r from-accent-blue via-indigo-600 to-accent-red bg-clip-text text-transparent">
+                Love & Learning
               </span>
-              <ArrowDown className="mt-2 h-5 w-5 animate-bounce-down text-accent-red" />
-            </div>
+            </motion.h1>
 
-            <div className="flex justify-center sm:justify-end">
-              <RotatingBadge />
-            </div>
+            {/* Elegant Minimal Subtitle */}
+            <motion.p
+              variants={itemVariants}
+              className="text-lg text-muted-foreground/80 sm:text-xl leading-relaxed tracking-wide mb-8 font-light max-w-xl"
+            >
+              A <span className="text-foreground/90 font-medium">joyful</span> preschool nurturing{" "}
+              <span className="text-foreground/90 font-medium">creativity</span>,{" "}
+              <span className="text-foreground/90 font-medium">confidence</span> and{" "}
+              <span className="text-foreground/90 font-medium">happy learning</span> — every single
+              day.
+            </motion.p>
+
+            {/* Premium CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-wrap items-center gap-4 w-full sm:w-auto"
+            >
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-accent-red px-8 py-4 text-base font-bold text-primary-foreground shadow-soft hover:shadow-float transition-all duration-300 hover:scale-[1.04] hover:bg-accent-red/95 cursor-pointer w-full sm:w-auto"
+              >
+                Enquire Now
+                <ArrowRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+
+            </motion.div>
+          </div>
+
+          {/* Right Column: Overlapping, Interactive visual card collage */}
+          <div className="lg:col-span-5 relative w-full h-[400px] sm:h-[450px] flex items-center justify-center">
+            {/* Card 1: Bottom / Back (Art & Craft) */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, rotate: -2, zIndex: 10, y: -5 }}
+              className="absolute left-4 top-4 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-card rotate-[-8deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-0"
+            >
+              <img src={cardImg3} alt="Happy Beginnings" className="w-full h-full object-cover" />
+            </motion.div>
+
+            {/* Card 2: Middle (Play Time) */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, rotate: 2, zIndex: 10, y: -5 }}
+              className="absolute right-4 top-12 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-card rotate-[6deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-1"
+            >
+              <img src={cardImg2} alt="Messy Play Magic" className="w-full h-full object-cover" />
+            </motion.div>
+
+            {/* Card 3: Top / Front (Kids Learning) */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, rotate: -1, zIndex: 10, y: -5 }}
+              className="absolute left-16 bottom-2 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-float rotate-[-2deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-2"
+            >
+              <img
+                src={cardImg1}
+                alt="Graduation Day"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
         </div>
-      </div>
+
+        {/* Infinite Moving Photo Marquee (Bottom) */}
+        <motion.div
+          variants={itemVariants}
+          className="relative w-full overflow-hidden border-t border-border/20 pt-8"
+        >
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white via-white/80 to-transparent" />
+          <div className="overflow-hidden py-4">
+            <div className="animate-marquee flex w-max gap-6 px-4">
+              {loop.map((s, i) => (
+                <figure
+                  key={i}
+                  className="group relative w-[180px] sm:w-[220px] shrink-0 overflow-hidden rounded-[24px] border-[4px] golden-border shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:shadow-float"
+                >
+                  <img
+                    src={s.src}
+                    alt={s.label}
+                    loading="lazy"
+                    className="aspect-[3/4] h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <figcaption className="absolute inset-x-3 bottom-3 rounded-full bg-white/95 px-3 py-1.5 text-center text-[10px] font-bold tracking-wide text-foreground backdrop-blur-md border border-white/40 shadow-soft">
+                    {s.label}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
