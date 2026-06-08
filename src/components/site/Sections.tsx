@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Monitor,
   Sparkles,
@@ -12,11 +12,34 @@ import {
   ArrowLeft,
   ArrowRight,
   Heart,
+  MapPin,
+  ExternalLink,
+  Phone,
+  MessageCircle,
+  Compass,
+  Navigation,
 } from "lucide-react";
 import aboutImg from "@/assets/about-classroom.jpg";
 import img2 from "@/assets/hero-2-play.jpg";
 import ab12Img from "@/assets/ab_12.jpg";
 import tomHomeImg from "@/assets/tom_home.png";
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+    </svg>
+  );
+}
 
 const aboutPoints = [
   {
@@ -71,7 +94,7 @@ export function AboutSection() {
             </div>
             <div>
               <div className="text-3xl font-extrabold text-accent-red font-sans leading-none">
-                12+
+                04+
               </div>
               <div className="text-[11px] font-bold text-muted-foreground mt-1.5 leading-tight">
                 Years of joyful learning & growth
@@ -479,11 +502,206 @@ export function TestimonialsSection() {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                i === index ? "w-6 bg-accent-blue" : "w-2 bg-border hover:bg-muted-foreground/30"
-              }`}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === index ? "w-6 bg-accent-blue" : "w-2 bg-border hover:bg-muted-foreground/30"
+                }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function LocationsSection() {
+  const campusData = [
+    {
+      id: "main",
+      title: "Main Campus",
+      badge: "Main Branch",
+      address: "83/1, 2nd Cross Street, VIP Colony, Palakattu Thottam, Perundurai Road, Erode - 638011",
+      landmark: "Opposite Reliance Mall, Behind Zudio",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=83%2F1%2C+2nd+Cross+Street%2C+VIP+Colony%2C+Palakattu+Thottam%2C+Perundurai+Road%2C+Erode+-+638011",
+      embedUrl: "https://maps.google.com/maps?q=83/1,%202nd%20Cross%20Street,%20VIP%20Colony,%20Palakattu%20Thottam,%20Perundurai%20Road,%20Erode%20638011&t=&z=15&ie=UTF8&iwloc=&output=embed",
+      accentColor: "accent-red",
+      badgeStyle: "text-accent-red bg-accent-red/[0.08] border-accent-red/15",
+      buttonStyle: "bg-accent-red hover:bg-accent-red/95 shadow-accent-red/10",
+      pinColor: "text-accent-red",
+      features: ["Opposite Reliance Mall", "CCTV Secured", "Spacious Playarea"],
+      contacts: [
+        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["97882 09034", "97882 89034"], hrefs: ["https://wa.me/919788209034", "https://wa.me/919788289034"] },
+        { type: "landline", label: "Landline", values: ["0424 420 4777"], hrefs: ["tel:+914244204777"] }
+      ]
+    },
+    {
+      id: "kuppanna",
+      title: "Kuppanna Street Campus",
+      badge: "Activity Branch",
+      address: "No. 530, Kuppanna Street, Perundurai Road, Near PP Scaans, Edayankattuvalasu, Erode - 638011",
+      landmark: "Near PP Scaans",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=No.+530%2C+Kuppanna+Street%2C+Perundurai+Road%2C+Near+PP+Scaans%2C+Edayankattuvalasu%2C+Erode+-+638011",
+      embedUrl: "https://maps.google.com/maps?q=530,%20Kuppanna%20Street,%20Perundurai%20Road,%20Near%20PP%20Scaans,%20Edayankattuvalasu,%20Erode%20638011&t=&z=15&ie=UTF8&iwloc=&output=embed",
+      accentColor: "accent-blue",
+      badgeStyle: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15",
+      buttonStyle: "bg-accent-blue hover:bg-accent-blue/95 shadow-accent-blue/10",
+      pinColor: "text-accent-blue",
+      features: ["Near PP Scaans", "Smart Classrooms", "Activity Center"],
+      contacts: [
+        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["94428 95057"], hrefs: ["https://wa.me/919442895057"] },
+        { type: "landline", label: "Landline", values: ["0424 420 8777"], hrefs: ["tel:+914244208777"] }
+      ]
+    }
+  ];
+
+  return (
+    <section className="px-4 py-24 bg-gradient-to-b from-transparent via-soft/20 to-transparent relative overflow-hidden">
+      {/* Background Ambient Radial Glows */}
+      <div className="pointer-events-none absolute left-0 top-1/4 -z-10 h-96 w-96 rounded-full bg-accent-blue/[0.015] blur-3xl animate-float-slow" />
+      <div className="pointer-events-none absolute right-0 bottom-1/4 -z-10 h-96 w-96 rounded-full bg-accent-red/[0.015] blur-3xl animate-float" />
+
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-4xl leading-tight sm:text-5xl font-extrabold tracking-tight">
+            Our <span className="italic text-accent-blue font-sans">Campuses</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground/85 text-base sm:text-lg font-light leading-relaxed">
+            Locate and explore our child-friendly preschool branches in Erode
+          </p>
+        </div>
+
+
+
+        <div className="grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto items-stretch">
+          {campusData.map((loc) => (
+            <motion.div
+              key={loc.id}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 120, damping: 18 }}
+              className="group relative rounded-[36px] border-[6px] golden-border bg-white p-6 sm:p-8 shadow-soft hover:shadow-float flex flex-col justify-between overflow-hidden text-left"
+            >
+              {/* Decorative Campus-Specific Glow */}
+              <div 
+                className="pointer-events-none absolute -left-10 -top-10 -z-10 h-40 w-40 rounded-full blur-3xl opacity-20 animate-float"
+                style={{ backgroundColor: loc.accentColor === "accent-red" ? "rgba(220, 38, 38, 0.2)" : "rgba(15, 126, 188, 0.2)" }}
+              />
+
+              <div>
+                {/* Header with Title and Badge */}
+                <div className="flex items-center justify-between gap-4 flex-wrap mb-6">
+                  <h3 className="text-2xl font-black tracking-tight text-foreground/90 leading-tight">
+                    {loc.title}
+                  </h3>
+                  <span className={`inline-block rounded-full px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider ${loc.badgeStyle}`}>
+                    {loc.badge}
+                  </span>
+                </div>
+
+                {/* Interactive Google Map Embed (Differentiated!) */}
+                <div className="relative rounded-2xl overflow-hidden aspect-[16/9] mb-6 shadow-inner border border-border/50 bg-muted">
+                  <iframe
+                    src={loc.embedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`${loc.title} Map Location`}
+                    className="w-full h-full"
+                  />
+                </div>
+
+                {/* Features List */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {loc.features.map((feat, i) => (
+                    <span key={i} className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-xl bg-soft/50 text-muted-foreground border border-border/30">
+                      <Sparkles className="h-3 w-3 text-amber-500 shrink-0" />
+                      {feat}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Address details */}
+                <div className="space-y-4 pt-5 border-t border-border/40">
+                  <div className="flex gap-4">
+                    <div className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-muted/50 ${loc.pinColor}`}>
+                      <MapPin className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-foreground/80 leading-relaxed">
+                        {loc.address}
+                      </p>
+                      {loc.landmark && (
+                        <p className="text-xs text-muted-foreground mt-1.5 font-bold">
+                          Landmark: {loc.landmark}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Contacts block */}
+                <div className="space-y-3 pt-5 border-t border-border/40">
+                  {loc.contacts.map((contact, idx) => (
+                    <div key={idx} className="flex gap-4 items-center">
+                      <div className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-muted/50 ${contact.type === "whatsapp" ? "text-emerald-600" : "text-accent-blue"}`}>
+                        {contact.type === "whatsapp" ? (
+                          <WhatsAppIcon className="h-5 w-5" />
+                        ) : (
+                          <Phone className="h-5 w-5" />
+                        )}
+                      </div>
+                      <div className="text-sm font-bold text-foreground/85 flex flex-wrap gap-x-2 gap-y-1 items-center">
+                        <span className="text-xs font-semibold text-muted-foreground mr-1">{contact.label}:</span>
+                        {loc.id === "main" && contact.values.length > 1 ? (
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-x-2 gap-y-0.5">
+                            {contact.values.map((val, valIdx) => (
+                              <div key={valIdx} className="inline-flex items-center">
+                                <a
+                                  href={contact.hrefs[valIdx]}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="hover:text-accent-blue transition-colors cursor-pointer hover:underline"
+                                >
+                                  {val}
+                                </a>
+                                {valIdx < contact.values.length - 1 && <span className="text-muted-foreground/50 ml-2 hidden sm:inline">|</span>}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          contact.values.map((val, valIdx) => (
+                            <a
+                              key={valIdx}
+                              href={contact.hrefs[valIdx]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-accent-blue transition-colors cursor-pointer hover:underline"
+                            >
+                              {val}
+                            </a>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navigation CTA button */}
+              <div className="mt-8 pt-6 border-t border-border/40">
+                <a
+                  href={loc.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`}
+                >
+                  <Navigation className="h-5 w-5 animate-pulse" />
+                  Get Navigation Map
+                  <ExternalLink className="h-4 w-4 ml-1" />
+                </a>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { SplashIntro } from "../components/site/SplashIntro";
 
 import appCss from "../styles.css?url";
+import logoImg from "../assets/logo.jpg";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
@@ -99,6 +100,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/jpeg",
+        href: logoImg,
+      },
       {
         rel: "stylesheet",
         href: appCss,

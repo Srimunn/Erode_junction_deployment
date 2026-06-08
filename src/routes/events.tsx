@@ -4,21 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
-  Maximize2,
-  X,
-  Calendar,
-  CheckCircle2
+  Calendar
 } from "lucide-react";
 
 // Image Imports
-import a1 from "@/assets/a-1.jpg";
-import a2 from "@/assets/a-2.jpg";
 import a3 from "@/assets/a-3.jpg";
 import a4 from "@/assets/a-4.jpg";
 import a5 from "@/assets/a-5.jpg";
 import a6 from "@/assets/a-6.jpg";
 import a7 from "@/assets/a-7.jpg";
-import a8 from "@/assets/a-8.jpg";
 
 import c1 from "@/assets/c-1.jpg";
 import c2 from "@/assets/c-2.jpg";
@@ -48,30 +42,12 @@ interface GalleryItem {
   desc: string;
   highlights: string[];
   skills: string[];
+  zoom?: number;
+  objectPosition?: string;
 }
 
 const items: readonly GalleryItem[] = [
   // Activity (a-1 to a-8)
-  { 
-    src: a1, 
-    label: "Outdoor Activity Fun", 
-    category: "Activity", 
-    h: "tall", 
-    date: "April 2026", 
-    desc: "Joyful play sessions where physical skills and teamwork develop naturally through fun interactive group games on our green lawns.",
-    highlights: ["Structured outdoor games", "Cooperative play activities", "Gross motor skill exercises"],
-    skills: ["Teamwork", "Agility", "Coordination", "Social Skills"]
-  },
-  { 
-    src: a2, 
-    label: "Nature & Outdoor Play", 
-    category: "Activity", 
-    h: "short", 
-    date: "May 2026", 
-    desc: "Nurturing curiosity and sensory awareness with outdoor playground exploration and healthy fresh air play.",
-    highlights: ["Sensory outdoor walks", "Safe playground exploration", "Active physical games"],
-    skills: ["Motor Planning", "Coordination", "Confidence", "Nature Exploration"]
-  },
   { 
     src: a3, 
     label: "Creative Indoor Playtime", 
@@ -122,16 +98,6 @@ const items: readonly GalleryItem[] = [
     highlights: ["Rocket model making", "Planet sensory sorting", "Constellation drawings"],
     skills: ["Astronomy Basics", "Creativity", "Curiosity", "Handcrafting"]
   },
-  { 
-    src: a8, 
-    label: "Indoor Play & Coordination", 
-    category: "Activity", 
-    h: "tall", 
-    date: "April 2026", 
-    desc: "Cooperative circle games and active physical exercises inside our air-conditioned playroom.",
-    highlights: ["Indoor obstacle course", "Balance beanbag games", "Interactive dance movements"],
-    skills: ["Coordination", "Agility", "Balance", "Cooperative Play"]
-  },
 
   // Celebration (c-1 to c-10)
   { 
@@ -172,7 +138,8 @@ const items: readonly GalleryItem[] = [
     date: "Ongoing", 
     desc: "Spreading joy, kindness, and sharing by celebrating each child's special day with friends.",
     highlights: ["Class birthday songs", "Sharing healthy cake alternatives", "Birthday card handcrafting"],
-    skills: ["Social Bonding", "Empathy", "Sharing Habits", "Self-Esteem"]
+    skills: ["Social Bonding", "Empathy", "Sharing Habits", "Self-Esteem"],
+    objectPosition: "50% calc(50% - 90px)"
   },
   { 
     src: c5, 
@@ -222,7 +189,8 @@ const items: readonly GalleryItem[] = [
     date: "January 2026", 
     desc: "Awarding certificates and celebrating class milestones during the final showcase event.",
     highlights: ["Growth portfolio awards", "Student speech moments", "Parent photo station"],
-    skills: ["Self-Esteem", "Reflection", "Transitions Readiness", "Public Speaking"]
+    skills: ["Self-Esteem", "Reflection", "Transitions Readiness", "Public Speaking"],
+    objectPosition: "50% calc(50% + 80px)"
   },
   { 
     src: c10, 
@@ -308,7 +276,6 @@ export const Route = createFileRoute("/events")({
 
 function EventsPage() {
   const [activeFilter, setActiveFilter] = useState<string>("All");
-  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   
   // Spotlight active index
   const [spotlightIndex, setSpotlightIndex] = useState(0);
@@ -538,7 +505,6 @@ function EventsPage() {
                       {/* Right side: High-end 3D tilt picture slate */}
                       <div className="lg:col-span-7 flex justify-center items-center" style={{ perspective: 1200 }}>
                         <motion.div
-                          onClick={() => setSelectedItem(activeItem)}
                           whileHover={{ rotateY: -6, rotateX: 4, scale: 1.02, z: 15 }}
                           animate={{
                             boxShadow: [
@@ -558,12 +524,16 @@ function EventsPage() {
                             boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                             borderColor: { duration: 3, repeat: Infinity, ease: "easeInOut" }
                           }}
-                          className="group relative w-full aspect-[4/3] rounded-[32px] overflow-hidden border-[8px] cursor-pointer transform-gpu"
+                          className="group relative w-full aspect-[4/3] rounded-[32px] overflow-hidden border-[8px] transform-gpu"
                         >
                           <img
                             src={activeItem.src}
                             alt={activeItem.label}
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
+                            className="w-full h-full object-cover transition-transform duration-1000 scale-[var(--zoom-factor,1)] group-hover:scale-[calc(var(--zoom-factor,1)*1.03)]"
+                            style={{
+                              ...((activeItem.zoom ? { "--zoom-factor": activeItem.zoom } : {}) as React.CSSProperties),
+                              objectPosition: activeItem.objectPosition
+                            }}
                           />
                           
                           {/* Animated gold diagonal shimmer sheen sweep */}
@@ -583,10 +553,6 @@ function EventsPage() {
                           </div>
 
                           <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
-                          <div className="absolute bottom-5 right-5 z-10 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-accent-blue flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-neutral-200/50">
-                            <Maximize2 className="h-3 w-3" />
-                            <span>Enlarge view</span>
-                          </div>
                         </motion.div>
                       </div>
                     </motion.div>
@@ -610,113 +576,6 @@ function EventsPage() {
         </div>
       </div>
 
-      {/* ================= ELEGANT DETAILS PANEL OVERLAY ================= */}
-      <AnimatePresence>
-        {selectedItem && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-          >
-            {/* Modal Box */}
-            <motion.div
-              initial={{ scale: 0.96, y: 15 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.96, y: 15 }}
-              transition={{ type: "spring", stiffness: 350, damping: 28 }}
-              className="relative w-full max-w-5xl bg-white rounded-[32px] border border-neutral-200/50 shadow-float overflow-hidden grid grid-cols-1 md:grid-cols-12 max-h-[92vh] md:max-h-[85vh]"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedItem(null)}
-                className="absolute top-4 right-4 z-30 p-2.5 text-neutral-500 hover:text-neutral-800 hover:bg-neutral-100 rounded-full transition-colors cursor-pointer active:scale-95"
-                aria-label="Close details"
-              >
-                <X className="h-5 w-5" />
-              </button>
-
-              {/* Left Side Image Panel */}
-              <div className="md:col-span-7 bg-[#f6f7f9] p-6 flex flex-col justify-center items-center relative min-h-[300px] md:min-h-0 border-r border-neutral-200/40">
-                <div className="relative w-full h-full rounded-[24px] overflow-hidden shadow-card border-4 border-[#ffd700] bg-neutral-200">
-                  <img
-                    src={selectedItem.src}
-                    alt={selectedItem.label}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-neutral-900/5 mix-blend-multiply" />
-                </div>
-              </div>
-
-              {/* Right Side Content Drawer */}
-              <div className="md:col-span-5 p-6 md:p-8 flex flex-col justify-between overflow-y-auto max-h-[50vh] md:max-h-full">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <span className="px-3 py-0.5 rounded-full bg-accent-blue/10 text-accent-blue text-[10px] font-extrabold uppercase border border-accent-blue/5">
-                      {selectedItem.category}
-                    </span>
-                    <span className="text-xs font-bold text-neutral-400 flex items-center gap-1.5">
-                      <Calendar className="h-3.5 w-3.5" />
-                      {selectedItem.date}
-                    </span>
-                  </div>
-
-                  <h2 className="text-2xl md:text-3xl font-black text-neutral-800 leading-tight">
-                    {selectedItem.label}
-                  </h2>
-
-                  <p className="text-sm text-neutral-500 leading-relaxed font-light">
-                    {selectedItem.desc}
-                  </p>
-
-                  {/* Highlights Bullet List */}
-                  <div className="space-y-3 pt-4 border-t border-neutral-100">
-                    <h4 className="text-xs font-black uppercase text-neutral-700 tracking-wider">
-                      Preschool Highlights
-                    </h4>
-                    <ul className="space-y-2">
-                      {selectedItem.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2.5 text-xs text-neutral-600">
-                          <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
-                          <span className="font-medium leading-relaxed">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Skills tags */}
-                  <div className="space-y-3 pt-4 border-t border-neutral-100">
-                    <h4 className="text-xs font-black uppercase text-neutral-700 tracking-wider">
-                      Developmental Skills Nurtured
-                    </h4>
-                    <div className="flex flex-wrap gap-1.5">
-                      {selectedItem.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="text-[11px] bg-neutral-100 text-neutral-700 font-bold px-3 py-1 rounded-full border border-neutral-200/50"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Footer action */}
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between">
-                  <span className="text-[10px] font-bold text-neutral-400">Junior Junction Play School · Erode</span>
-                  <button
-                    onClick={() => setSelectedItem(null)}
-                    className="bg-neutral-800 hover:bg-neutral-900 text-white font-bold text-xs px-5 py-2.5 rounded-full transition-all active:scale-95 cursor-pointer"
-                  >
-                    Done
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

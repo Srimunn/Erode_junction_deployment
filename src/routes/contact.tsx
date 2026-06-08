@@ -19,6 +19,23 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import tomImg from "../assets/tom.png";
 
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+    </svg>
+  );
+}
+
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
@@ -207,7 +224,7 @@ function ContactPage() {
                     "w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100/90 text-accent-blue border border-blue-300/45 shadow-[0_8px_22px_rgba(15,126,188,0.2)] scale-110 rotate-12 transition-all duration-500",
                 },
                 {
-                  icon: MessageCircle,
+                  icon: WhatsAppIcon,
                   label: "WhatsApp Support",
                   value: "Chat on +91 94428 95057",
                   color:
