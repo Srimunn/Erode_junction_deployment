@@ -19,10 +19,10 @@ import {
   Compass,
   Navigation,
 } from "lucide-react";
-import aboutImg from "@/assets/about-classroom.jpg";
-import img2 from "@/assets/hero-2-play.jpg";
-import ab12Img from "@/assets/ab_12.jpg";
-import tomHomeImg from "@/assets/tom_home.png";
+import aboutImg from "@/assets/about-classroom.webp";
+import img2 from "@/assets/hero-2-play.webp";
+import ab12Img from "@/assets/ab_12.webp";
+
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -90,7 +90,14 @@ export function AboutSection() {
             className="absolute -bottom-8 -right-4 hidden rounded-[28px] border-2 golden-border bg-white/90 backdrop-blur-md p-3.5 shadow-float sm:flex items-center gap-4 max-w-[285px] z-10 cursor-pointer"
           >
             <div className="h-16 w-16 rounded-full overflow-hidden shrink-0 shadow-soft border-2 golden-border">
-              <img src={ab12Img} alt="Kids playing" className="h-full w-full object-cover" />
+              <img
+                src={ab12Img}
+                alt="Kids playing"
+                width={64}
+                height={64}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div>
               <div className="text-3xl font-extrabold text-accent-red font-sans leading-none">
@@ -482,18 +489,7 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Floating Mascot Tom */}
-          <motion.img
-            src={tomHomeImg}
-            alt="Tom Mascot"
-            animate={{ y: [0, -6, 0] }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute -right-[100px] -bottom-[1px] h-70 w-auto z-20 pointer-events-none hidden md:block"
-          />
+
         </div>
 
         {/* Carousel Dots */}

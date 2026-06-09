@@ -4,21 +4,21 @@ import { GraduationCap, Heart, Sparkles, Mail, Calendar, Award, User, BookOpen }
 import { Link } from "@tanstack/react-router";
 
 // Import all 6 staff images from assets
-import staff1 from "@/assets/staff_1.png";
-import staff2 from "@/assets/staff_2.png";
-import staff3 from "@/assets/staff_3.png";
-import staff4 from "@/assets/staff_4.png";
-import staff5 from "@/assets/staff_5.png";
-import staff6 from "@/assets/staff_6.png";
+import staff1 from "@/assets/staff_1.webp";
+import staff2 from "@/assets/staff_2.webp";
+import staff3 from "@/assets/staff_3.webp";
+import staff4 from "@/assets/staff_4.webp";
+import staff5 from "@/assets/staff_5.webp";
+import staff6 from "@/assets/staff_6.webp";
 
 // Import new sliding gallery images
-import t1 from "@/assets/t-1.jpg";
-import t2 from "@/assets/t-2.jpg";
-import t3 from "@/assets/t-3.jpg";
-import t4 from "@/assets/t-4.jpg";
-import t5 from "@/assets/t-5.jpg";
-import t6 from "@/assets/t-6.jpg";
-import t7 from "@/assets/t-7.jpg";
+import t1 from "@/assets/t-1.webp";
+import t2 from "@/assets/t-2.webp";
+import t3 from "@/assets/t-3.webp";
+import t4 from "@/assets/t-4.webp";
+import t5 from "@/assets/t-5.webp";
+import t6 from "@/assets/t-6.webp";
+import t7 from "@/assets/t-7.webp";
 
 interface StaffMember {
   id: number;
@@ -58,7 +58,7 @@ const leadershipStaff: readonly StaffMember[] = [
     id: 3,
     name: "Mrs. R. Preethi",
     role: "Principal",
-    qualifications: ["M.A.", "B.Ed. (Montessori Trained)"],
+    qualifications: ["B.COM (CA)", "B.Sc Psychology (Montessori Trained)"],
     experience: "8+ Years",
     philosophy: "Every child is a unique blossom. We nurture them with love, guidance, and active play.",
     image: staff3,
@@ -76,7 +76,7 @@ const teamStaff: readonly StaffMember[] = [
   {
     id: 4,
     name: "Mr. R. Rajesh",
-    role: "Academic Officer (AO)",
+    role: "Administrative Officer (AO)",
     qualifications: ["MBA (Operations & Admin)"],
     experience: "6+ Years",
     philosophy: "Ensuring a seamless, supportive, and joyful environment for our staff and little learners.",
@@ -225,6 +225,8 @@ function StaffPage() {
                         src={member.image}
                         alt={member.name}
                         loading="lazy"
+                        width={180}
+                        height={180}
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
@@ -298,6 +300,8 @@ function StaffPage() {
                         src={member.image}
                         alt={member.name}
                         loading="lazy"
+                        width={300}
+                        height={300}
                         className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-102"
                       />
                     </div>
@@ -359,6 +363,8 @@ function StaffPage() {
                         src={imgSrc}
                         alt="Life at Junior Junction"
                         loading="lazy"
+                        width={isSquare ? 300 : 400}
+                        height={300}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     </figure>

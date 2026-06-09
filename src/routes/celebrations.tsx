@@ -19,21 +19,21 @@ import {
 
 // Image Imports matching events.tsx and user's celebration directory
 
-import annualDayImg from "@/assets/celebration/annual day.jpg";
-import brownDayImg from "@/assets/celebration/brown day.jpg";
-import childrenDayImg from "@/assets/celebration/children day.jpg";
-import christmasImg from "@/assets/celebration/christmas celebration.jpg";
-import diwaliImg from "@/assets/celebration/diwali.jpg";
-import fieldTripImg from "@/assets/celebration/field trip.jpg";
-import graduationImg from "@/assets/celebration/graduation day.JPG";
-import krishnaImg from "@/assets/celebration/krishna jayanthi.jpg";
-import onamImg from "@/assets/celebration/onam.jpg";
-import orangeDayImg from "@/assets/celebration/Orange Day.jpg";
-import pinkDayImg from "@/assets/celebration/pink day.jpg";
-import sportsDayImg from "@/assets/celebration/sports day.jpg";
-import vijayaImg from "@/assets/celebration/vijaya dhasami.jpg";
-import welcomingImg from "@/assets/celebration/welcoming activities.jpg";
-import pongalImg from "@/assets/celebration/pongal.jpg";
+import annualDayImg from "@/assets/celebration/annual day.webp";
+import brownDayImg from "@/assets/celebration/brown day.webp";
+import childrenDayImg from "@/assets/celebration/children day.webp";
+import christmasImg from "@/assets/celebration/christmas celebration.webp";
+import diwaliImg from "@/assets/celebration/diwali.webp";
+import fieldTripImg from "@/assets/celebration/field trip.webp";
+import graduationImg from "@/assets/celebration/graduation day.webp";
+import krishnaImg from "@/assets/celebration/krishna jayanthi.webp";
+import onamImg from "@/assets/celebration/onam.webp";
+import orangeDayImg from "@/assets/celebration/Orange Day.webp";
+import pinkDayImg from "@/assets/celebration/pink day.webp";
+import sportsDayImg from "@/assets/celebration/sports day.webp";
+import vijayaImg from "@/assets/celebration/vijaya dhasami.webp";
+import welcomingImg from "@/assets/celebration/welcoming activities.webp";
+import pongalImg from "@/assets/celebration/pongal.webp";
 
 interface CelebrationItem {
   id: number;
@@ -498,6 +498,9 @@ function CelebrationsPage() {
                   <img
                     src={activeItem.src}
                     alt={activeItem.title}
+                    loading="lazy"
+                    width={512}
+                    height={384}
                     className={`w-full h-full object-cover select-none ${
                       activeItem.objectPosition && activeItem.objectPosition.startsWith("object-")
                         ? activeItem.objectPosition

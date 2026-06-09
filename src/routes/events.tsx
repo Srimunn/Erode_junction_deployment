@@ -8,28 +8,28 @@ import {
 } from "lucide-react";
 
 // Image Imports
-import a3 from "@/assets/a-3.jpg";
-import a4 from "@/assets/a-4.jpg";
-import a5 from "@/assets/a-5.jpg";
-import a6 from "@/assets/a-6.jpg";
-import a7 from "@/assets/a-7.jpg";
+import a3 from "@/assets/a-3.webp";
+import a4 from "@/assets/a-4.webp";
+import a5 from "@/assets/a-5.webp";
+import a6 from "@/assets/a-6.webp";
+import a7 from "@/assets/a-7.webp";
 
-import c1 from "@/assets/c-1.jpg";
-import c2 from "@/assets/c-2.jpg";
-import c3 from "@/assets/c-3.jpg";
-import c4 from "@/assets/c-4.jpg";
-import c5 from "@/assets/c-5.jpg";
-import c6 from "@/assets/c-6.jpg";
-import c7 from "@/assets/c-7.jpg";
-import c8 from "@/assets/c-8.jpg";
-import c9 from "@/assets/c-9.jpg";
-import c10 from "@/assets/c-10.jpg";
+import c1 from "@/assets/c-1.webp";
+import c2 from "@/assets/c-2.webp";
+import c3 from "@/assets/c-3.webp";
+import c4 from "@/assets/c-4.webp";
+import c5 from "@/assets/c-5.webp";
+import c6 from "@/assets/c-6.webp";
+import c7 from "@/assets/c-7.webp";
+import c8 from "@/assets/c-8.webp";
+import c9 from "@/assets/c-9.webp";
+import c10 from "@/assets/c-10.webp";
 
-import l1 from "@/assets/l-1.jpg";
-import l2 from "@/assets/l-2.jpg";
-import l3 from "@/assets/l-3.jpg";
-import l4 from "@/assets/l-4.jpg";
-import l5 from "@/assets/l-5.jpg";
+import l1 from "@/assets/l-1.webp";
+import l2 from "@/assets/l-2.webp";
+import l3 from "@/assets/l-3.webp";
+import l4 from "@/assets/l-4.webp";
+import l5 from "@/assets/l-5.webp";
 
 const categories = ["All", "Activity", "Learn"] as const;
 
@@ -189,8 +189,7 @@ const items: readonly GalleryItem[] = [
     date: "January 2026", 
     desc: "Awarding certificates and celebrating class milestones during the final showcase event.",
     highlights: ["Growth portfolio awards", "Student speech moments", "Parent photo station"],
-    skills: ["Self-Esteem", "Reflection", "Transitions Readiness", "Public Speaking"],
-    objectPosition: "50% calc(50% + 80px)"
+    skills: ["Self-Esteem", "Reflection", "Transitions Readiness", "Public Speaking"]
   },
   { 
     src: c10, 
@@ -380,6 +379,9 @@ function EventsPage() {
                         transition={{ duration: 0.8 }}
                         src={activeItem.src} 
                         alt="" 
+                        loading="lazy"
+                        width={800}
+                        height={600}
                         className="w-full h-full object-cover" 
                       />
                     </AnimatePresence>
@@ -529,6 +531,9 @@ function EventsPage() {
                           <img
                             src={activeItem.src}
                             alt={activeItem.label}
+                            width={800}
+                            height={600}
+                            loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-1000 scale-[var(--zoom-factor,1)] group-hover:scale-[calc(var(--zoom-factor,1)*1.03)]"
                             style={{
                               ...((activeItem.zoom ? { "--zoom-factor": activeItem.zoom } : {}) as React.CSSProperties),

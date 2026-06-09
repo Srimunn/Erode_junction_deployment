@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Youtube, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import logoImg from "../../assets/logo.jpg";
-import fImg from "../../assets/f.jpg";
+import logoImg from "../../assets/logo.webp";
 
 export function Footer() {
   return (
@@ -83,6 +82,9 @@ export function Footer() {
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
               src={logoImg}
               alt="Junior Junction Logo"
+              loading="lazy"
+              width={44}
+              height={44}
               className="h-11 w-11 rounded-full object-cover border border-accent-blue/20 bg-card shadow-soft"
             />
             <div className="flex flex-col items-start gap-1">
@@ -128,7 +130,10 @@ export function Footer() {
             {[
               { to: "/", label: "Home" },
               { to: "/about", label: "About" },
+              { to: "/staff", label: "Staff" },
               { to: "/events", label: "Events" },
+              { to: "/celebrations", label: "Celebrations" },
+              { to: "/contact", label: "Contact Us" },
             ].map((l) => (
               <li key={l.to}>
                 <Link

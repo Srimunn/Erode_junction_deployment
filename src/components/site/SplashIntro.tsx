@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import logoImg from "../../assets/logo.jpg";
+import logoImg from "../../assets/logo.webp";
 
 interface SplashIntroProps {
   onComplete: () => void;
@@ -117,6 +117,10 @@ export function SplashIntro({ onComplete }: SplashIntroProps) {
             <img
               src={logoImg}
               alt="Junior Junction Logo"
+              loading="eager"
+              width={224}
+              height={224}
+              fetchpriority="high"
               className="h-full w-full rounded-full object-cover"
             />
             {/* Glass light sweep reflection */}

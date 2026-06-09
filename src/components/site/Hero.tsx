@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Sparkles, ArrowRight, Heart } from "lucide-react";
-import img1 from "@/assets/hero-1-learning.jpg";
-import img2 from "@/assets/hero-2-play.jpg";
-import img3 from "@/assets/hero-3-art.jpg";
-import img4 from "@/assets/hero-4-dance.jpg";
-import img5 from "@/assets/hero-5-outdoor.jpg";
-import img6 from "@/assets/hero-6-story.jpg";
-import img7 from "@/assets/hero-7-digital.jpg";
-import img8 from "@/assets/hero-8-sports.jpg";
+import img1 from "@/assets/hero-1-learning.webp";
+import img2 from "@/assets/hero-2-play.webp";
+import img3 from "@/assets/hero-3-art.webp";
+import img4 from "@/assets/hero-4-dance.webp";
+import img5 from "@/assets/hero-5-outdoor.webp";
+import img6 from "@/assets/hero-6-story.webp";
+import img7 from "@/assets/hero-7-digital.webp";
+import img8 from "@/assets/hero-8-sports.webp";
 
-import cardImg1 from "@/assets/one.jpg";
-import cardImg2 from "@/assets/two.jpg";
-import cardImg3 from "@/assets/three.jpg";
+import cardImg1 from "@/assets/one.webp";
+import cardImg2 from "@/assets/two.webp";
+import cardImg3 from "@/assets/three.webp";
 
 const slides = [
   { src: img1, label: "Diwali Delight" },
@@ -155,7 +155,14 @@ export function Hero() {
               whileHover={{ scale: 1.05, rotate: -2, zIndex: 10, y: -5 }}
               className="absolute left-4 top-4 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-card rotate-[-8deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-0"
             >
-              <img src={cardImg3} alt="Happy Beginnings" className="w-full h-full object-cover" />
+              <img
+                src={cardImg3}
+                alt="Happy Beginnings"
+                width={260}
+                height={347}
+                loading="eager"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
 
             {/* Card 2: Middle (Play Time) */}
@@ -164,7 +171,14 @@ export function Hero() {
               whileHover={{ scale: 1.05, rotate: 2, zIndex: 10, y: -5 }}
               className="absolute right-4 top-12 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-card rotate-[6deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-1"
             >
-              <img src={cardImg2} alt="Messy Play Magic" className="w-full h-full object-cover" />
+              <img
+                src={cardImg2}
+                alt="Messy Play Magic"
+                width={260}
+                height={347}
+                loading="eager"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
 
             {/* Card 3: Top / Front (Kids Learning) */}
@@ -176,6 +190,10 @@ export function Hero() {
               <img
                 src={cardImg1}
                 alt="Graduation Day"
+                width={260}
+                height={347}
+                loading="eager"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -200,6 +218,8 @@ export function Hero() {
                     src={s.src}
                     alt={s.label}
                     loading="lazy"
+                    width={220}
+                    height={293}
                     className="aspect-[3/4] h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <figcaption className="absolute inset-x-3 bottom-3 rounded-full bg-white/95 px-3 py-1.5 text-center text-[10px] font-bold tracking-wide text-foreground backdrop-blur-md border border-white/40 shadow-soft">

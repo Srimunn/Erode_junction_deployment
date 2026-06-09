@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import tomImg from "../assets/tom.png";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -360,26 +359,6 @@ function ContactPage() {
               animate="show"
               className="mt-[110px] bg-white/70 backdrop-blur-xl border-[6px] golden-border rounded-[36px] p-8 md:p-10 shadow-[0_20px_50px_-15px_rgba(15,126,188,0.12)] z-10 w-full min-h-[580px] flex flex-col justify-center relative overflow-visible"
             >
-              {/* Lying Tom Cat overlapping on the top-right border of the card */}
-              <motion.div
-                className="absolute -top-20 -right-4 sm:-top-24 sm:-right-6 md:-top-28 md:-right-8 w-56 sm:w-64 md:w-72 select-none pointer-events-none z-30 overflow-visible"
-                animate={{
-                  y: [0, -6, 0],
-                  rotate: [0, 1.5, -1.5, 0],
-                  scale: [1, 1.01, 0.99, 1]
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <img
-                  src={tomImg}
-                  alt="Lying Tom Cat"
-                  className="w-full h-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.15)]"
-                />
-              </motion.div>
               <AnimatePresence mode="wait">
                 {!sent ? (
                   <motion.form
@@ -406,7 +385,7 @@ function ContactPage() {
                       const body = `Parent Name: ${name}\nProgram Interest: ${program}\n\nMessage/Query:\n${message}`;
                       window.location.href = `mailto:juniorjunctionerode@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                     }}
-                    className="space-y-6 text-left w-full flex flex-col justify-between flex-1"
+                    className="space-y-6 text-left w-full flex flex-col justify-between flex-1 relative z-10"
                   >
                     <div>
                       <h2 className="mt-[10px] text-2xl font-bold tracking-tight text-foreground/90 font-sans">

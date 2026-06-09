@@ -12,7 +12,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { SplashIntro } from "../components/site/SplashIntro";
 
 import appCss from "../styles.css?url";
-import logoImg from "../assets/logo.jpg";
+import logoImg from "../assets/logo.webp";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
@@ -176,21 +176,23 @@ function RootComponent() {
         {showSplash ? (
           <SplashIntro key="splash" onComplete={handleSplashComplete} />
         ) : (
-          <motion.div
-            key="app-content"
-            initial={{ opacity: 0, filter: "blur(20px)", scale: 1.04 }}
-            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className={`min-h-screen flex flex-col ${
-              isContact ? "bg-gradient-to-tr from-[#EEF8FF] via-white to-[#F5FBFF]" : ""
-            }`}
-          >
+          <>
             <Navbar />
-            <main className="flex-1">
-              <Outlet />
-            </main>
-            <Footer />
-          </motion.div>
+            <motion.div
+              key="app-content"
+              initial={{ opacity: 0, filter: "blur(20px)", scale: 1.04 }}
+              animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className={`min-h-screen flex flex-col ${
+                isContact ? "bg-gradient-to-tr from-[#EEF8FF] via-white to-[#F5FBFF]" : ""
+              }`}
+            >
+              <main className="flex-1">
+                <Outlet />
+              </main>
+              <Footer />
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </QueryClientProvider>

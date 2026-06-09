@@ -2,7 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logoImg from "../../assets/logo.jpg";
+import logoImg from "../../assets/logo.webp";
 
 const links = [
   { to: "/", label: "Home" },
@@ -29,10 +29,11 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 animate-nav-slide">
       <nav
-        className={`glass flex w-full max-w-7xl items-center justify-between rounded-full border px-6 transition-all duration-500 animate-navbar-breath ${scrolled
+        className={`glass flex w-full max-w-7xl items-center justify-between rounded-full border px-6 transition-all duration-500 animate-navbar-breath ${
+          scrolled
             ? "shadow-float py-2 bg-white/80 border-white/85 scale-[0.99] backdrop-blur-2xl"
             : "shadow-soft py-3.5 border-white/60"
-          }`}
+        }`}
       >
         <Link to="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity group">
           <motion.div
@@ -45,6 +46,9 @@ export function Navbar() {
               <img
                 src={logoImg}
                 alt="Junior Junction Logo"
+                loading="eager"
+                width={72}
+                height={72}
                 className="h-18 w-18 rounded-full object-cover border-2 border-white shadow-soft transition-transform duration-500 hover:scale-[1.06] animate-logo-float-premium"
               />
             </div>
@@ -59,7 +63,7 @@ export function Navbar() {
                 className="text-[10px] font-bold tracking-[0.25em] text-accent-red uppercase mt-1.5 ml-1 leading-none opacity-0 animate-fade-in-left"
                 style={{ animationDelay: "450ms", animationFillMode: "forwards" }}
               >
-                ERODE
+                PLAYSCHOOL, ERODE
               </span>
             </div>
           </motion.div>
@@ -75,8 +79,9 @@ export function Navbar() {
                     whileHover={{ y: -2, scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className={`relative text-sm font-semibold tracking-tight px-4 py-2.5 transition-all duration-300 underline-grow-center hover:text-shadow-glow ${active ? "text-accent-blue" : "text-foreground/75 hover:text-accent-blue"
-                      }`}
+                    className={`relative text-sm font-semibold tracking-tight px-4 py-2.5 transition-all duration-300 underline-grow-center hover:text-shadow-glow ${
+                      active ? "text-accent-blue" : "text-foreground/75 hover:text-accent-blue"
+                    }`}
                   >
                     <span>{l.label}</span>
 
@@ -138,10 +143,11 @@ export function Navbar() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className={`block rounded-xl px-3 py-2 text-base font-semibold transition-colors ${active
+                    className={`block rounded-xl px-3 py-2 text-base font-semibold transition-colors ${
+                      active
                         ? "bg-accent-blue/10 text-accent-blue"
                         : "hover:bg-foreground/5 text-foreground/80"
-                      }`}
+                    }`}
                   >
                     {l.label}
                   </Link>

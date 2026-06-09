@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Heart, Star } from "lucide-react";
-import logoPremium from "@/assets/logo-premium.png";
+import logoPremium from "@/assets/logo.webp";
 
 export function BrandLogo() {
   return (
@@ -34,6 +34,9 @@ export function BrandLogo() {
             <img
               src={logoPremium}
               alt="Junior Junction Vector Emblem"
+              loading="eager"
+              width={80}
+              height={80}
               className="h-full w-full object-contain scale-[1.1] transition-transform duration-500 group-hover:scale-[1.15]"
             />
           </div>
