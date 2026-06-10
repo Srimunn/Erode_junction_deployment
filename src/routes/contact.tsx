@@ -15,6 +15,7 @@ import {
   CheckCircle2,
   MapPin,
 } from "lucide-react";
+import abcdImg from "@/assets/abcd.webp";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -359,6 +360,11 @@ function ContactPage() {
               animate="show"
               className="mt-6 sm:mt-16 md:mt-[110px] bg-white/70 backdrop-blur-xl border-[6px] golden-border rounded-[36px] p-5 md:p-10 shadow-[0_20px_50px_-15px_rgba(15,126,188,0.12)] z-10 w-full min-h-[580px] flex flex-col justify-center relative overflow-visible"
             >
+              <img 
+                src={abcdImg} 
+                alt="Enquiry Decoration" 
+                className="absolute -top-[130px] right-4 w-56 h-48 object-contain z-20 pointer-events-none"
+              />
               <AnimatePresence mode="wait">
                 {!sent ? (
                   <motion.form

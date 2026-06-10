@@ -58,7 +58,7 @@ const leadershipStaff: readonly StaffMember[] = [
     id: 3,
     name: "Mrs. R. Preethi",
     role: "Principal",
-    qualifications: ["B.COM (CA)", "B.Sc Psychology (Montessori Trained)"],
+    qualifications: ["B.COM (CA)", "B.Sc Psychology ( Montessori Trained)"],
     experience: "8+ Years",
     philosophy: "Every child is a unique blossom. We nurture them with love, guidance, and active play.",
     image: staff3,
@@ -236,7 +236,7 @@ function StaffPage() {
                   <div className="flex-1 flex flex-col justify-between text-left">
                     <div>
                       <div className="mb-3.5 select-none">
-                        <span className={`inline-block px-4 py-1.5 rounded-xl text-xs md:text-sm font-black tracking-widest uppercase border-2 shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? '-rotate-1.5' : 'rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
+                        <span className={`inline-block px-4 py-1.5 rounded-xl text-xs md:text-sm font-black tracking-widest whitespace-nowrap uppercase border-2 shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? '-rotate-1.5' : 'rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
                           {member.role}
                         </span>
                       </div>
@@ -309,7 +309,7 @@ function StaffPage() {
                     {/* Meta info */}
                     <div className="text-left px-1">
                       <div className="mb-3 select-none">
-                        <span className={`inline-block px-3.5 py-1.5 rounded-xl text-[11px] md:text-xs font-black tracking-widest uppercase border-2 shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? 'rotate-1.5' : '-rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
+                        <span className={`inline-block px-3 py-1.5 rounded-xl text-[10px] md:text-[11px] font-black tracking-wider whitespace-nowrap uppercase border-2 shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? 'rotate-1.5' : '-rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
                           {member.role}
                         </span>
                       </div>

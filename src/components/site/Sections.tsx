@@ -21,7 +21,8 @@ import {
 } from "lucide-react";
 import aboutImg from "@/assets/about-classroom.webp";
 import img2 from "@/assets/hero-2-play.webp";
-import ab12Img from "@/assets/ab_12.webp";
+import logoImg from "@/assets/logo.webp";
+import pencileImg from "@/assets/pencile.webp";
 
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -91,8 +92,8 @@ export function AboutSection() {
           >
             <div className="h-16 w-16 rounded-full overflow-hidden shrink-0 shadow-soft border-2 golden-border">
               <img
-                src={ab12Img}
-                alt="Kids playing"
+                src={logoImg}
+                alt="Junior Junction Logo"
                 width={64}
                 height={64}
                 loading="lazy"
@@ -395,6 +396,15 @@ export function TestimonialsSection() {
 
         {/* Carousel Wrapper */}
         <div className="relative">
+          {/* Floating Pencil Graphic (Left Side) */}
+          <div className="absolute -left-34 -bottom-4 z-20 w-60 h-auto pointer-events-none hidden lg:block animate-float">
+            <img
+              src={pencileImg}
+              alt="Playful pencil character"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
           {/* Carousel Container */}
           <div className="relative overflow-hidden rounded-3xl border-[6px] golden-border bg-white/70 backdrop-blur-md p-5 sm:p-8 md:p-12 shadow-soft hover:bg-white hover:shadow-float">
             {/* Elegant decorative background quote mark */}
@@ -580,7 +590,7 @@ export function LocationsSection() {
               className="group relative rounded-[36px] border-[6px] golden-border bg-white p-6 sm:p-8 shadow-soft hover:shadow-float flex flex-col justify-between overflow-hidden text-left"
             >
               {/* Decorative Campus-Specific Glow */}
-              <div 
+              <div
                 className="pointer-events-none absolute -left-10 -top-10 -z-10 h-40 w-40 rounded-full blur-3xl opacity-20 animate-float"
                 style={{ backgroundColor: loc.accentColor === "accent-red" ? "rgba(220, 38, 38, 0.2)" : "rgba(15, 126, 188, 0.2)" }}
               />

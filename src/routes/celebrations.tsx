@@ -507,7 +507,7 @@ function CelebrationsPage() {
                         : !activeItem.objectPosition
                         ? "object-center"
                         : ""
-                    } ${activeItem.id === 15 ? "rotate-90" : ""}`}
+                    }`}
                     style={
                       activeItem.objectPosition && !activeItem.objectPosition.startsWith("object-")
                         ? { objectPosition: activeItem.objectPosition }

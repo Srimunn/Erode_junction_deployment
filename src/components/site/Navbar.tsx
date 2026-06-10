@@ -16,7 +16,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { location } = useRouterState();
-  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -50,7 +49,7 @@ export function Navbar() {
                 loading="eager"
                 width={72}
                 height={72}
-                className={`h-18 w-18 rounded-full object-contain border-2 border-white shadow-soft transition-transform duration-500 hover:scale-[1.06] animate-logo-float-premium ${isHome ? "rotate-90" : ""}`}
+                className="h-18 w-18 rounded-full object-contain border-2 border-white shadow-soft transition-transform duration-500 hover:scale-[1.06] animate-logo-float-premium"
               />
             </div>
             <div className="flex flex-col justify-center items-start text-left select-none">
