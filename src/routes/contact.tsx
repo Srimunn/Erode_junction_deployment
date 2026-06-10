@@ -159,7 +159,7 @@ function ContactPage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-[90px] text-5xl font-bold tracking-tight sm:text-6xl font-sans text-foreground/95 leading-tight"
+                className="mt-4 sm:mt-12 md:mt-[90px] text-[38px] sm:text-6xl font-bold tracking-tight font-sans text-foreground/95 leading-tight"
               >
                 Let's <span className="italic text-accent-blue font-sans">connect</span>
               </motion.h1>
@@ -357,7 +357,7 @@ function ContactPage() {
               variants={formVariants}
               initial="hidden"
               animate="show"
-              className="mt-[110px] bg-white/70 backdrop-blur-xl border-[6px] golden-border rounded-[36px] p-8 md:p-10 shadow-[0_20px_50px_-15px_rgba(15,126,188,0.12)] z-10 w-full min-h-[580px] flex flex-col justify-center relative overflow-visible"
+              className="mt-6 sm:mt-16 md:mt-[110px] bg-white/70 backdrop-blur-xl border-[6px] golden-border rounded-[36px] p-5 md:p-10 shadow-[0_20px_50px_-15px_rgba(15,126,188,0.12)] z-10 w-full min-h-[580px] flex flex-col justify-center relative overflow-visible"
             >
               <AnimatePresence mode="wait">
                 {!sent ? (
@@ -416,7 +416,7 @@ function ContactPage() {
                           <GraduationCap className="h-4.5 w-4.5 text-foreground/70" />
                           Program Interest
                         </label>
-                        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                        <div className="flex flex-wrap gap-2 sm:gap-2.5">
                           {["Toddler", "Play Group", "Pre-KG", "LKG", "UKG"].map((prog) => {
                             const isSelected = program === prog;
                             return (
@@ -429,7 +429,7 @@ function ContactPage() {
                                 }}
                                 whileHover={{ y: -2, scale: 1.03 }}
                                 whileTap={{ scale: 0.97 }}
-                                className={`px-4 py-3.5 rounded-full border text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer outline-none ${isSelected
+                                className={`px-3.5 py-3 min-[375px]:px-4.5 min-[375px]:py-3.5 rounded-full border text-xs min-[375px]:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer outline-none ${isSelected
                                   ? "bg-accent-blue text-white border-accent-blue shadow-lg shadow-accent-blue/20 scale-[1.03]"
                                   : errors.program
                                     ? "bg-white text-accent-red border-accent-red/45 hover:bg-red-50/10 shadow-sm"

@@ -64,7 +64,7 @@ const aboutPoints = [
 
 export function AboutSection() {
   return (
-    <section className="relative overflow-hidden px-4 py-24">
+    <section className="relative overflow-hidden px-4 py-12 sm:py-20 md:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
         {/* Left Column: Visual Overlapping Collage */}
         <div className="relative group">
@@ -96,7 +96,7 @@ export function AboutSection() {
                 width={64}
                 height={64}
                 loading="lazy"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
             <div>
@@ -175,7 +175,7 @@ const experiences = [
 
 export function ExperiencesSection() {
   return (
-    <section className="px-4 py-20 bg-gradient-to-b from-transparent via-soft/30 to-transparent">
+    <section className="px-4 py-12 sm:py-16 md:py-20 bg-gradient-to-b from-transparent via-soft/30 to-transparent">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
@@ -280,7 +280,7 @@ const features = [
 
 export function WhyChooseSection() {
   return (
-    <section className="px-4 py-24 relative overflow-hidden">
+    <section className="px-4 py-12 sm:py-20 md:py-24 relative overflow-hidden">
       {/* Background Ambient Radial Glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-accent-blue/[0.015] blur-3xl" />
 
@@ -375,7 +375,7 @@ export function TestimonialsSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-gradient-to-b from-soft/50 via-background to-soft/50 px-4 py-24 border-y border-border/40"
+      className="relative overflow-hidden bg-gradient-to-b from-soft/50 via-background to-soft/50 px-4 py-12 sm:py-20 md:py-24 border-y border-border/40"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -396,7 +396,7 @@ export function TestimonialsSection() {
         {/* Carousel Wrapper */}
         <div className="relative">
           {/* Carousel Container */}
-          <div className="relative overflow-hidden rounded-3xl border-[6px] golden-border bg-white/70 backdrop-blur-md p-8 sm:p-12 shadow-soft hover:bg-white hover:shadow-float">
+          <div className="relative overflow-hidden rounded-3xl border-[6px] golden-border bg-white/70 backdrop-blur-md p-5 sm:p-8 md:p-12 shadow-soft hover:bg-white hover:shadow-float">
             {/* Elegant decorative background quote mark */}
             <span className="select-none pointer-events-none absolute top-4 right-8 text-[160px] font-serif leading-none text-muted-foreground/[0.05]">
               &ldquo;
@@ -467,14 +467,14 @@ export function TestimonialsSection() {
                           <div className="flex items-center gap-2 self-end sm:self-center">
                             <button
                               onClick={handlePrev}
-                              className="group/btn h-10 w-10 rounded-full border border-border/80 bg-white/50 hover:bg-white hover:border-accent-blue/30 flex items-center justify-center shadow-soft hover:shadow-float active:scale-95 transition-all duration-200 cursor-pointer"
+                              className="group/btn h-11 w-11 rounded-full border border-border/80 bg-white/50 hover:bg-white hover:border-accent-blue/30 flex items-center justify-center shadow-soft hover:shadow-float active:scale-95 transition-all duration-200 cursor-pointer"
                               aria-label="Previous testimonial"
                             >
                               <ArrowLeft className="h-4 w-4 text-muted-foreground group-hover/btn:text-accent-blue transition-colors duration-200" />
                             </button>
                             <button
                               onClick={handleNext}
-                              className="group/btn h-10 w-10 rounded-full border border-border/80 bg-white/50 hover:bg-white hover:border-accent-blue/30 flex items-center justify-center shadow-soft hover:shadow-float active:scale-95 transition-all duration-200 cursor-pointer"
+                              className="group/btn h-11 w-11 rounded-full border border-border/80 bg-white/50 hover:bg-white hover:border-accent-blue/30 flex items-center justify-center shadow-soft hover:shadow-float active:scale-95 transition-all duration-200 cursor-pointer"
                               aria-label="Next testimonial"
                             >
                               <ArrowRight className="h-4 w-4 text-muted-foreground group-hover/btn:text-accent-blue transition-colors duration-200" />
@@ -493,15 +493,19 @@ export function TestimonialsSection() {
         </div>
 
         {/* Carousel Dots */}
-        <div className="mt-8 flex justify-center gap-2">
+        <div className="mt-8 flex justify-center gap-1">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === index ? "w-6 bg-accent-blue" : "w-2 bg-border hover:bg-muted-foreground/30"
-                }`}
+              className="h-11 px-2.5 flex items-center justify-center cursor-pointer group/dot"
               aria-label={`Go to testimonial ${i + 1}`}
-            />
+            >
+              <span
+                className={`h-2 rounded-full transition-all duration-300 ${i === index ? "w-6 bg-accent-blue" : "w-2 bg-border group-hover/dot:bg-muted-foreground/30"
+                  }`}
+              />
+            </button>
           ))}
         </div>
       </div>
@@ -550,7 +554,7 @@ export function LocationsSection() {
   ];
 
   return (
-    <section className="px-4 py-24 bg-gradient-to-b from-transparent via-soft/20 to-transparent relative overflow-hidden">
+    <section className="px-4 py-12 sm:py-20 md:py-24 bg-gradient-to-b from-transparent via-soft/20 to-transparent relative overflow-hidden">
       {/* Background Ambient Radial Glows */}
       <div className="pointer-events-none absolute left-0 top-1/4 -z-10 h-96 w-96 rounded-full bg-accent-blue/[0.015] blur-3xl animate-float-slow" />
       <div className="pointer-events-none absolute right-0 bottom-1/4 -z-10 h-96 w-96 rounded-full bg-accent-red/[0.015] blur-3xl animate-float" />

@@ -111,7 +111,7 @@ export function Hero() {
             {/* Clean Premium Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight font-sans mb-6 text-foreground/95 select-none"
+              className="text-[34px] min-[375px]:text-[40px] min-[450px]:text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight font-sans mb-6 text-foreground/95 select-none"
             >
               Where Little Minds <br />
               <span className="relative mt-2 inline-block font-extrabold bg-gradient-to-r from-accent-blue via-indigo-600 to-accent-red bg-clip-text text-transparent">
@@ -148,12 +148,12 @@ export function Hero() {
           </div>
 
           {/* Right Column: Overlapping, Interactive visual card collage */}
-          <div className="lg:col-span-5 relative w-full h-[400px] sm:h-[450px] flex items-center justify-center">
+          <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[450px] flex items-center justify-center">
             {/* Card 1: Bottom / Back (Art & Craft) */}
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: -2, zIndex: 10, y: -5 }}
-              className="absolute left-4 top-4 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-card rotate-[-8deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-0"
+              className="absolute left-2 top-4 w-[140px] min-[375px]:w-[170px] min-[450px]:w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[4px] sm:border-[6px] golden-border shadow-card rotate-[-8deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-0"
             >
               <img
                 src={cardImg3}
@@ -169,7 +169,7 @@ export function Hero() {
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: 2, zIndex: 10, y: -5 }}
-              className="absolute right-4 top-12 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-card rotate-[6deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-1"
+              className="absolute right-2 top-12 w-[140px] min-[375px]:w-[170px] min-[450px]:w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[4px] sm:border-[6px] golden-border shadow-card rotate-[6deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-1"
             >
               <img
                 src={cardImg2}
@@ -185,7 +185,7 @@ export function Hero() {
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: -1, zIndex: 10, y: -5 }}
-              className="absolute left-16 bottom-2 w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[6px] golden-border shadow-float rotate-[-2deg] bg-white cursor-pointer origin-center transition-shadow duration-300 hover:shadow-float z-2"
+              className="absolute left-10 min-[375px]:left-14 bottom-2 w-[140px] min-[375px]:w-[170px] min-[450px]:w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[4px] sm:border-[6px] golden-border shadow-float rotate-[-2deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-2"
             >
               <img
                 src={cardImg1}

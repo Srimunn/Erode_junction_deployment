@@ -112,7 +112,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -4, scale: 1.15 }}
-                className={`grid h-10 w-10 place-items-center rounded-full bg-white/60 border border-accent-blue/10 text-accent-blue/80 shadow-[0_4px_12px_rgba(15,126,188,0.04)] transition-all duration-300 cursor-pointer ${color} hover:text-white hover:border-transparent`}
+                className={`grid h-11 w-11 place-items-center rounded-full bg-white/60 border border-accent-blue/10 text-accent-blue/80 shadow-[0_4px_12px_rgba(15,126,188,0.04)] transition-all duration-300 cursor-pointer ${color} hover:text-white hover:border-transparent`}
                 aria-label={label}
               >
                 <Icon className="h-4.5 w-4.5" />
@@ -126,7 +126,7 @@ export function Footer() {
           <h4 className="text-xs font-bold font-sans uppercase tracking-wider text-accent-blue/80">
             Quick Links
           </h4>
-          <ul className="space-y-3 text-sm font-semibold">
+          <ul className="space-y-1 text-sm font-semibold">
             {[
               { to: "/", label: "Home" },
               { to: "/about", label: "About" },
@@ -138,7 +138,7 @@ export function Footer() {
               <li key={l.to}>
                 <Link
                   to={l.to}
-                  className="text-foreground/80 hover:text-accent-blue hover:translate-x-1 transition-all duration-300 inline-block"
+                  className="text-foreground/80 hover:text-accent-blue hover:translate-x-1 transition-all duration-300 inline-block py-1.5"
                 >
                   {l.label}
                 </Link>
@@ -155,7 +155,7 @@ export function Footer() {
           <ul className="space-y-3 text-sm font-semibold text-foreground/80">
             {["Toddler", "Play Group", "Pre-KG", "LKG", "UKG"].map((prog) => (
               <li key={prog}>
-                <span className="hover:text-accent-blue hover:translate-x-1 transition-all duration-300 inline-block cursor-default">
+                <span className="hover:text-accent-blue hover:translate-x-1 transition-all duration-300 inline-block cursor-default py-1">
                   {prog}
                 </span>
               </li>
@@ -172,7 +172,7 @@ export function Footer() {
 
             <li className="flex items-center gap-2.5">
               <Phone className="h-4.5 w-4.5 text-accent-blue/80 shrink-0" />
-              <a href="tel:+914244208777" className="hover:text-accent-blue transition-colors">
+              <a href="tel:+914244208777" className="hover:text-accent-blue transition-colors py-1.5 inline-block">
                 0424 420 8777
               </a>
             </li>
@@ -189,13 +189,13 @@ export function Footer() {
                 <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
                 <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
               </svg>
-              <a href="https://wa.me/919442895057" target="_blank" rel="noopener noreferrer" className="hover:text-accent-blue transition-colors">
+              <a href="https://wa.me/919442895057" target="_blank" rel="noopener noreferrer" className="hover:text-accent-blue transition-colors py-1.5 inline-block">
                 +91 94428 95057
               </a>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="h-4.5 w-4.5 text-accent-blue/80 shrink-0" />
-              <a href="mailto:juniorjunctionerode@gmail.com" className="hover:text-accent-blue transition-colors">
+              <a href="mailto:juniorjunctionerode@gmail.com" className="hover:text-accent-blue transition-colors py-1.5 inline-block">
                 juniorjunctionerode@gmail.com
               </a>
             </li>

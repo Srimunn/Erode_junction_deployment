@@ -166,7 +166,7 @@ export const Route = createFileRoute("/staff")({
 
 function StaffPage() {
   return (
-    <div className="relative min-h-screen px-4 pb-20 pt-40 bg-gradient-to-br from-[#FFFDF8] via-[#F7FAFC] to-[#FFF4F6] overflow-hidden flex flex-col justify-between">
+    <div className="relative min-h-screen px-4 pb-20 pt-28 sm:pt-36 md:pt-40 bg-gradient-to-br from-[#FFFDF8] via-[#F7FAFC] to-[#FFF4F6] overflow-hidden flex flex-col justify-between">
       {/* Background Ambient Decorative Glows */}
       <div className="pointer-events-none absolute left-0 top-0 -z-10 h-[600px] w-[600px] rounded-full bg-accent-blue/[0.04] blur-[120px]" />
       <div className="pointer-events-none absolute right-0 bottom-0 -z-10 h-[600px] w-[600px] rounded-full bg-accent-red/[0.03] blur-[120px]" />
@@ -177,7 +177,7 @@ function StaffPage() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-black tracking-tight text-neutral-800 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-neutral-800 leading-tight"
         >
           Meet the Team Behind <br />
           Our <span className="text-accent-red font-light italic">Junior Junction</span>

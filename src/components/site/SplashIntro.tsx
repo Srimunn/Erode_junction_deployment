@@ -129,7 +129,7 @@ export function SplashIntro({ onComplete }: SplashIntroProps) {
         </div>
 
         {/* 2. Brand Name Letter-by-Letter Motion Blur Reveal */}
-        <h1 className="mt-4 text-xl sm:text-3xl md:text-4xl font-black tracking-[0.25em] flex justify-center items-center select-none leading-none whitespace-nowrap">
+        <h1 className="mt-4 text-[14px] min-[375px]:text-[17px] min-[450px]:text-xl sm:text-3xl md:text-4xl font-black tracking-[0.1em] min-[375px]:tracking-[0.18em] min-[450px]:tracking-[0.25em] flex justify-center items-center select-none leading-none whitespace-nowrap">
           {"JUNIOR JUNCTION".split("").map((char, index) => (
             <motion.span
               key={index}
@@ -140,7 +140,7 @@ export function SplashIntro({ onComplete }: SplashIntroProps) {
                 delay: 1.0 + index * 0.04,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className={char === " " ? "w-2 sm:w-3 md:w-4" : "inline-block bg-gradient-to-r from-accent-blue to-indigo-700 bg-clip-text text-transparent"}
+              className={char === " " ? "w-1.5 min-[375px]:w-2 sm:w-3 md:w-4" : "inline-block bg-gradient-to-r from-accent-blue to-indigo-700 bg-clip-text text-transparent"}
             >
               {char}
             </motion.span>

@@ -337,7 +337,7 @@ function EventsPage() {
   };
 
   return (
-    <div className="relative min-h-screen px-4 pb-24 pt-44 bg-[#fafafc] overflow-hidden">
+    <div className="relative min-h-screen px-4 pb-24 pt-28 sm:pt-36 md:pt-44 bg-[#fafafc] overflow-hidden">
       {/* Background Ambient Radial Glows */}
       <div className="pointer-events-none absolute left-0 top-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-accent-blue/[0.025] blur-3xl" />
       <div className="pointer-events-none absolute right-0 bottom-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-accent-red/[0.02] blur-3xl" />
@@ -345,8 +345,8 @@ function EventsPage() {
       {/* Header Section */}
       <section className="mx-auto max-w-7xl relative z-10 text-center">
         <div className="flex flex-col items-center justify-center gap-6 border-b border-neutral-200/60 pb-8">
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-neutral-800 text-center">
-            Activity , Learning & <span className="text-accent-red font-light italic">Celebrations</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-neutral-800 text-center">
+            Activity, Learning & <span className="text-accent-red font-light italic">Celebrations</span>
           </h1>
         </div>
       </section>
@@ -354,7 +354,7 @@ function EventsPage() {
       {/* Main Content Showcase */}
       <div className="mx-auto max-w-7xl mt-12 relative min-h-[500px] z-10">
         <div 
-          className="relative w-full rounded-[40px] border border-neutral-200/50 bg-white shadow-card p-6 md:p-12 overflow-hidden min-h-[520px]"
+          className="relative w-full rounded-[40px] border border-neutral-200/50 bg-white shadow-card p-4 sm:p-6 md:p-12 overflow-hidden min-h-[520px]"
           style={{ perspective: 1200 }}
         >
           
@@ -479,7 +479,7 @@ function EventsPage() {
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.95 }}
                               onClick={handlePrevSpotlight}
-                              className="p-3 border border-neutral-200 hover:border-accent-blue rounded-full bg-white text-neutral-600 hover:text-accent-blue shadow-xs active:scale-95 transition-all cursor-pointer hover:shadow-md"
+                              className="h-11 w-11 flex items-center justify-center border border-neutral-200 hover:border-accent-blue rounded-full bg-white text-neutral-600 hover:text-accent-blue shadow-xs active:scale-95 transition-all cursor-pointer hover:shadow-md"
                               aria-label="Previous slide"
                             >
                               <ChevronLeft className="h-4 w-4" />
@@ -488,7 +488,7 @@ function EventsPage() {
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.95 }}
                               onClick={handleNextSpotlight}
-                              className="p-3 border border-neutral-200 hover:border-accent-blue rounded-full bg-white text-neutral-600 hover:text-accent-blue shadow-xs active:scale-95 transition-all cursor-pointer hover:shadow-md"
+                              className="h-11 w-11 flex items-center justify-center border border-neutral-200 hover:border-accent-blue rounded-full bg-white text-neutral-600 hover:text-accent-blue shadow-xs active:scale-95 transition-all cursor-pointer hover:shadow-md"
                               aria-label="Next slide"
                             >
                               <ChevronRight className="h-4 w-4" />

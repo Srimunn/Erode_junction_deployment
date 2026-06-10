@@ -369,7 +369,7 @@ function CelebrationsPage() {
   };
 
   return (
-    <div className="relative min-h-screen px-4 pb-12 pt-40 bg-[#fafafc] overflow-hidden flex flex-col justify-between">
+    <div className="relative min-h-screen px-4 pb-12 pt-28 sm:pt-36 md:pt-40 bg-[#fafafc] overflow-hidden flex flex-col justify-between">
       {/* Background Decorative Art Gradients */}
       <div className="pointer-events-none absolute left-0 top-0 -z-10 h-[600px] w-[600px] rounded-full bg-accent-blue/[0.02] blur-[120px]" />
       <div className="pointer-events-none absolute right-0 bottom-0 -z-10 h-[600px] w-[600px] rounded-full bg-accent-red/[0.02] blur-[120px]" />
@@ -377,7 +377,7 @@ function CelebrationsPage() {
       {/* Main Title Header */}
       <header className="mx-auto max-w-7xl w-full text-center mb-8 relative z-10">
 
-        <h1 className="text-3xl md:text-5xl font-black tracking-tight text-neutral-800">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tight text-neutral-800">
           Our Year of <span className="text-accent-red font-light italic">Celebrations</span>
         </h1>
       </header>
@@ -385,8 +385,8 @@ function CelebrationsPage() {
       {/* Main Screen Container - Split Screen Presentation */}
       <main className="mx-auto max-w-7xl w-full flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative z-10 min-h-[550px]">
 
-        {/* LEFT COLUMN: Vertical Scrollable Exhibition Index (Desktop) */}
-        <section className="lg:col-span-5 flex flex-col h-[520px] lg:h-[620px] bg-white/50 backdrop-blur-md border border-neutral-200/40 rounded-[32px] p-6 shadow-soft order-2 lg:order-1">
+        {/* LEFT COLUMN: Vertical Scrollable Exhibition Index (Desktop Only) */}
+        <section className="lg:col-span-5 hidden lg:flex flex-col h-[520px] lg:h-[620px] bg-white/50 backdrop-blur-md border border-neutral-200/40 rounded-[32px] p-6 shadow-soft order-2 lg:order-1">
           <div className="mb-4 pb-3 border-b border-neutral-100 flex items-center justify-between">
             <span className="text-xs font-black uppercase text-neutral-400 tracking-widest">Select Milestone</span>
             <span className="text-xs font-bold text-accent-blue bg-accent-blue/10 px-2.5 py-0.5 rounded-full">
@@ -507,7 +507,7 @@ function CelebrationsPage() {
                         : !activeItem.objectPosition
                         ? "object-center"
                         : ""
-                    }`}
+                    } ${activeItem.id === 15 ? "rotate-90" : ""}`}
                     style={
                       activeItem.objectPosition && !activeItem.objectPosition.startsWith("object-")
                         ? { objectPosition: activeItem.objectPosition }
@@ -564,6 +564,59 @@ function CelebrationsPage() {
             <div className="absolute inset-0 bg-neutral-100 rounded-[28px] border border-neutral-200/20 -z-10 transform translate-y-3 translate-x-2 rotate-3 scale-98 pointer-events-none opacity-80" />
             <div className="absolute inset-0 bg-neutral-200 rounded-[28px] border border-neutral-200/10 -z-20 transform translate-y-5 -translate-x-1.5 -rotate-2 scale-96 pointer-events-none opacity-40" />
 
+          </div>
+
+          {/* Mobile-only Navigation & Horizontal Milestone index (under card deck) */}
+          <div className="w-full max-w-lg mt-6 flex flex-col gap-4 lg:hidden">
+            {/* Mobile Nav Button Row */}
+            <div className="flex items-center justify-between px-1">
+              <button
+                onClick={handlePrev}
+                className="h-11 px-4 flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white hover:bg-neutral-50 text-xs font-bold text-neutral-600 active:scale-95 transition-all cursor-pointer shadow-soft"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                <span>Back</span>
+              </button>
+              <span className="text-xs font-black text-neutral-500 bg-neutral-100 px-3.5 py-1 rounded-full border border-neutral-200/50">
+                {activeIndex + 1} / {celebrations.length}
+              </span>
+              <button
+                onClick={handleNext}
+                className="h-11 px-4 flex items-center gap-1.5 rounded-full bg-neutral-800 hover:bg-neutral-900 text-xs font-bold text-white active:scale-95 transition-all cursor-pointer shadow-soft"
+              >
+                <span>Next</span>
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* Horizontal Scrollable milestones selection list */}
+            <div 
+              className="w-full overflow-x-auto py-1.5 flex gap-2 px-1 items-center justify-start min-h-[48px]"
+              style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
+            >
+              <style dangerouslySetInnerHTML={{__html: `
+                /* Hide scrollbar for Chrome, Safari and Opera */
+                .w-full::-webkit-scrollbar {
+                  display: none;
+                }
+              `}} />
+              {celebrations.map((c, index) => {
+                const isSelected = activeIndex === index;
+                return (
+                  <button
+                    key={c.id}
+                    onClick={() => setActiveIndex(index)}
+                    className={`h-11 min-w-[44px] px-3.5 rounded-full border flex items-center justify-center font-bold text-xs shrink-0 cursor-pointer transition-all ${
+                      isSelected
+                        ? "bg-accent-blue text-white border-accent-blue shadow-md scale-105"
+                        : "bg-white text-neutral-500 border-neutral-200 hover:border-neutral-300"
+                    }`}
+                  >
+                    {c.numStr}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </section>
 
