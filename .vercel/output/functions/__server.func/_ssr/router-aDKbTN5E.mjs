@@ -19,7 +19,7 @@ import "stream";
 import "../_libs/isbot.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const logoImg = "/assets/logo-C-GB_7ZM.webp";
+const logoImg = "/assets/logo-BbF0WjH3.webp";
 function SplashIntro({ onComplete }) {
   reactExports.useEffect(() => {
     const completeTimer = setTimeout(() => {
@@ -126,7 +126,7 @@ function SplashIntro({ onComplete }) {
                         width: 224,
                         height: 224,
                         fetchpriority: "high",
-                        className: "h-full w-full rounded-full object-cover"
+                        className: "h-full w-full rounded-full object-contain"
                       }
                     ),
                     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shine" })
@@ -444,7 +444,7 @@ function Footer() {
               loading: "lazy",
               width: 44,
               height: 44,
-              className: "h-11 w-11 rounded-full object-cover border border-accent-blue/20 bg-card shadow-soft"
+              className: "h-11 w-11 rounded-full object-contain border border-accent-blue/20 bg-card shadow-soft"
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-start gap-1", children: [
@@ -499,7 +499,7 @@ function Footer() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full flex flex-col items-start", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-2.5 text-xs sm:text-sm font-medium text-foreground/75 flex flex-col items-start justify-start text-left", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2.5 py-0.5", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4 text-accent-blue/80 shrink-0 mt-0.5" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+914244208777", className: "hover:text-accent-blue transition-colors duration-200", children: "0424 420 8777" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+914244204777", className: "hover:text-accent-blue transition-colors duration-200", children: "0424 420 4777" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2.5 py-0.5", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -518,7 +518,7 @@ function Footer() {
                 ]
               }
             ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://wa.me/919442895057", target: "_blank", rel: "noopener noreferrer", className: "hover:text-accent-blue transition-colors duration-200", children: "+91 94428 95057" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://wa.me/919788209034", target: "_blank", rel: "noopener noreferrer", className: "hover:text-accent-blue transition-colors duration-200", children: "+91 97882 09034" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2.5 py-0.5", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4 text-accent-blue/80 shrink-0 mt-0.5" }),
@@ -529,11 +529,11 @@ function Footer() {
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "a",
               {
-                href: "https://maps.google.com/?q=Junior+Junction+Kids+Care+and+Play+Group+Erode",
+                href: "https://www.google.com/maps/search/?api=1&query=83%2F1%2C+2nd+Cross+Street%2C+VIP+Colony%2C+Palakattu+Thottam%2C+Perundurai+Road%2C+Erode+-+638011",
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: "hover:text-accent-blue transition-colors duration-200 leading-relaxed",
-                children: "VIP Colony / Kuppanna St, Erode, TN"
+                className: "hover:text-accent-blue transition-colors duration-200 leading-relaxed animate-pulse",
+                children: "83/1, 2nd Cross Street, VIP Colony, Palakattu Thottam, Perundurai Road, Erode - 638011"
               }
             )
           ] })
@@ -745,7 +745,7 @@ const Route$4 = createFileRoute("/events")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./contact-TzCe5Fvp.mjs");
+const $$splitComponentImporter$3 = () => import("./contact-BwbX-VFT.mjs");
 const Route$3 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -781,7 +781,7 @@ const Route$2 = createFileRoute("/celebrations")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-DPs8p6rx.mjs");
+const $$splitComponentImporter$1 = () => import("./about-2-jLtTFm.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -799,7 +799,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-DgrcGYrS.mjs");
+const $$splitComponentImporter = () => import("./index-CgMeGIEs.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

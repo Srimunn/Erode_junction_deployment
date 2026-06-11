@@ -121,7 +121,7 @@ export function SplashIntro({ onComplete }: SplashIntroProps) {
               width={224}
               height={224}
               fetchpriority="high"
-              className="h-full w-full rounded-full object-cover"
+              className="h-full w-full rounded-full object-contain"
             />
             {/* Glass light sweep reflection */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-shine" />

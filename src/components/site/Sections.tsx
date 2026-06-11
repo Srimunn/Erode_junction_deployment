@@ -114,7 +114,7 @@ export function AboutSection() {
         {/* Right Column: Upgraded Content Card Grid */}
         <div className="flex flex-col items-start text-left w-full min-w-0">
           <h2 className="text-2xl min-[400px]:text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.15] text-foreground/95">
-            About <span className="italic text-accent-red font-sans">Junior Junction</span>
+            About <span className="italic text-accent-blue font-sans">Junior Junction</span>
           </h2>
           <p className="mt-3 sm:mt-6 text-sm sm:text-lg text-muted-foreground/80 leading-relaxed font-light">
             A safe, nurturing, and activity-based preschool in the heart of Erode. We blend play,
@@ -557,8 +557,8 @@ export function LocationsSection() {
       pinColor: "text-accent-blue",
       features: ["Near PP Scaans", "Smart Classrooms", "Activity Center"],
       contacts: [
-        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["94428 95057"], hrefs: ["https://wa.me/919442895057"] },
-        { type: "landline", label: "Landline", values: ["0424 420 8777"], hrefs: ["tel:+914244208777"] }
+        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["97882 09034"], hrefs: ["https://wa.me/919788209034"] },
+        { type: "landline", label: "Landline", values: ["0424 420 4777"], hrefs: ["tel:+914244204777"] }
       ]
     }
   ];

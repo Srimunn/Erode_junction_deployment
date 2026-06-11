@@ -85,7 +85,7 @@ export function Footer() {
               loading="lazy"
               width={44}
               height={44}
-              className="h-11 w-11 rounded-full object-cover border border-accent-blue/20 bg-card shadow-soft"
+              className="h-11 w-11 rounded-full object-contain border border-accent-blue/20 bg-card shadow-soft"
             />
             <div className="flex flex-col items-start gap-1">
               <span className="text-xl font-bold tracking-tight text-foreground/90 font-sans leading-none">
@@ -172,8 +172,8 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-foreground/75 flex flex-col items-start justify-start text-left">
               <li className="flex items-start gap-2.5 py-0.5">
                 <Phone className="h-4 w-4 text-accent-blue/80 shrink-0 mt-0.5" />
-                <a href="tel:+914244208777" className="hover:text-accent-blue transition-colors duration-200">
-                  0424 420 8777
+                <a href="tel:+914244204777" className="hover:text-accent-blue transition-colors duration-200">
+                  0424 420 4777
                 </a>
               </li>
               <li className="flex items-start gap-2.5 py-0.5">
@@ -189,8 +189,8 @@ export function Footer() {
                   <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
                   <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                 </svg>
-                <a href="https://wa.me/919442895057" target="_blank" rel="noopener noreferrer" className="hover:text-accent-blue transition-colors duration-200">
-                  +91 94428 95057
+                <a href="https://wa.me/919788209034" target="_blank" rel="noopener noreferrer" className="hover:text-accent-blue transition-colors duration-200">
+                  +91 97882 09034
                 </a>
               </li>
               <li className="flex items-start gap-2.5 py-0.5">
@@ -202,12 +202,12 @@ export function Footer() {
               <li className="flex items-start gap-2.5 py-0.5">
                 <MapPin className="h-4 w-4 text-accent-blue/80 shrink-0 mt-0.5" />
                 <a 
-                  href="https://maps.google.com/?q=Junior+Junction+Kids+Care+and+Play+Group+Erode" 
+                  href="https://www.google.com/maps/search/?api=1&query=83%2F1%2C+2nd+Cross+Street%2C+VIP+Colony%2C+Palakattu+Thottam%2C+Perundurai+Road%2C+Erode+-+638011" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-accent-blue transition-colors duration-200 leading-relaxed"
+                  className="hover:text-accent-blue transition-colors duration-200 leading-relaxed animate-pulse"
                 >
-                  VIP Colony / Kuppanna St, Erode, TN
+                  83/1, 2nd Cross Street, VIP Colony, Palakattu Thottam, Perundurai Road, Erode - 638011
                 </a>
               </li>
             </ul>

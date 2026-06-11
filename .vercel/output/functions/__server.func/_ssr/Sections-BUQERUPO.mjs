@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-BcmXqz92.mjs";
+import { l as logoImg } from "./router-aDKbTN5E.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -87,7 +87,7 @@ function AboutSection() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-start text-left w-full min-w-0", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-2xl min-[400px]:text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.15] text-foreground/95", children: [
         "About ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-accent-red font-sans", children: "Junior Junction" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-accent-blue font-sans", children: "Junior Junction" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 sm:mt-6 text-sm sm:text-lg text-muted-foreground/80 leading-relaxed font-light", children: "A safe, nurturing, and activity-based preschool in the heart of Erode. We blend play, exploration, and gentle structure so every child discovers their unique spark." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-5 sm:mt-8 space-y-3 sm:space-y-4 w-full", children: aboutPoints.map((point) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -415,8 +415,8 @@ function LocationsSection() {
       pinColor: "text-accent-blue",
       features: ["Near PP Scaans", "Smart Classrooms", "Activity Center"],
       contacts: [
-        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["94428 95057"], hrefs: ["https://wa.me/919442895057"] },
-        { type: "landline", label: "Landline", values: ["0424 420 8777"], hrefs: ["tel:+914244208777"] }
+        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["97882 09034"], hrefs: ["https://wa.me/919788209034"] },
+        { type: "landline", label: "Landline", values: ["0424 420 4777"], hrefs: ["tel:+914244204777"] }
       ]
     }
   ];
