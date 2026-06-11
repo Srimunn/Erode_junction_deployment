@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-C3lDw9Il.mjs";
+import { l as logoImg } from "./router-CtIdN7jR.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -204,14 +204,6 @@ function WhyChooseSection() {
 }
 const testimonials = [
   {
-    name: "Kavitha Natarajan",
-    role: "Parent · 2 months ago",
-    text: "As a mother, when you entrust your child to a new place with new people, there is such fear in your mind, and I too was very afraid when I enrolled my two-year-old twin sons in this school. But within two or three days, I could feel the kindness of the teachers and chair women of this school, who take care of the children with love and instill good qualities in them. Every evening, when I pick up the children from school, I feel relieved to see the children's smiling faces.... THANK YOU SO MUCH TO ALL",
-    rating: 5,
-    initials: "KN",
-    badgeColor: "text-accent-red bg-accent-red/[0.08] border-accent-red/15"
-  },
-  {
     name: "Yuva Raj",
     role: "Parent · 4 months ago",
     text: "We are very satisfied. Our child always gets good opportunities to explore and progress in all aspects. The school has been successful in striking an appropriate balance between Academic and Co-Curricular activities.",
@@ -318,7 +310,7 @@ function TestimonialsSection() {
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-muted-foreground/80 text-base sm:text-lg font-light", children: "Hear from the families who make our preschool community so special" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-34 -bottom-4 z-20 w-60 h-auto pointer-events-none hidden lg:block animate-float", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-4 sm:-left-34 bottom-0 sm:-bottom-4 z-20 w-24 sm:w-60 h-auto pointer-events-none animate-float", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
                 src: pencileImg,
@@ -339,7 +331,7 @@ function TestimonialsSection() {
                     return /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
-                        className: "w-full shrink-0 flex flex-col justify-between min-h-[350px] sm:min-h-[220px] px-1",
+                        className: "w-full shrink-0 flex flex-col justify-between min-h-[290px] sm:min-h-[220px] pl-14 pr-2 sm:px-1",
                         children: [
                           /* @__PURE__ */ jsxRuntimeExports.jsxs(
                             motion.div,
@@ -352,7 +344,7 @@ function TestimonialsSection() {
                               transition: { duration: 0.4, ease: "easeOut" },
                               children: [
                                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-0.5 text-amber-400/90", children: Array.from({ length: t.rating }).map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "h-4 w-4 fill-current" }, i)) }),
-                                /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: "mt-8 text-base sm:text-lg leading-relaxed text-foreground/80 font-normal italic", children: [
+                                /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: "mt-4 sm:mt-8 text-sm sm:text-lg leading-relaxed text-foreground/80 font-normal italic", children: [
                                   "“",
                                   t.text,
                                   "”"
@@ -369,8 +361,8 @@ function TestimonialsSection() {
                               },
                               transition: { duration: 0.4, delay: 0.08, ease: "easeOut" },
                               children: [
-                                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-[1px] w-full bg-border/40 my-8" }),
-                                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6", children: [
+                                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-[1px] w-full bg-border/40 my-4 sm:my-8" }),
+                                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6", children: [
                                   /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "flex items-center gap-3.5", children: [
                                     /* @__PURE__ */ jsxRuntimeExports.jsx(
                                       "div",

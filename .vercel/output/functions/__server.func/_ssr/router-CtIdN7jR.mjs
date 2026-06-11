@@ -184,7 +184,7 @@ function SplashIntro({ onComplete }) {
     }
   );
 }
-const appCss = "/assets/styles-UWbrU66Z.css";
+const appCss = "/assets/styles-DsY-I07Y.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -781,7 +781,7 @@ const Route$2 = createFileRoute("/celebrations")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-B1jWiA69.mjs");
+const $$splitComponentImporter$1 = () => import("./about-wZmU1ygN.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -799,7 +799,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-D7DIfbeZ.mjs");
+const $$splitComponentImporter = () => import("./index-CaEY5CMQ.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

@@ -329,14 +329,6 @@ export function WhyChooseSection() {
 
 const testimonials = [
   {
-    name: "Kavitha Natarajan",
-    role: "Parent · 2 months ago",
-    text: "As a mother, when you entrust your child to a new place with new people, there is such fear in your mind, and I too was very afraid when I enrolled my two-year-old twin sons in this school. But within two or three days, I could feel the kindness of the teachers and chair women of this school, who take care of the children with love and instill good qualities in them. Every evening, when I pick up the children from school, I feel relieved to see the children's smiling faces.... THANK YOU SO MUCH TO ALL",
-    rating: 5,
-    initials: "KN",
-    badgeColor: "text-accent-red bg-accent-red/[0.08] border-accent-red/15",
-  },
-  {
     name: "Yuva Raj",
     role: "Parent · 4 months ago",
     text: "We are very satisfied. Our child always gets good opportunities to explore and progress in all aspects. The school has been successful in striking an appropriate balance between Academic and Co-Curricular activities.",
@@ -453,7 +445,7 @@ export function TestimonialsSection() {
         {/* Carousel Wrapper */}
         <div className="relative">
           {/* Floating Pencil Graphic (Left Side) */}
-          <div className="absolute -left-34 -bottom-4 z-20 w-60 h-auto pointer-events-none hidden lg:block animate-float">
+          <div className="absolute -left-4 sm:-left-34 bottom-0 sm:-bottom-4 z-20 w-24 sm:w-60 h-auto pointer-events-none animate-float">
             <img
               src={pencileImg}
               alt="Playful pencil character"
@@ -480,7 +472,7 @@ export function TestimonialsSection() {
                   return (
                     <div
                       key={t.name}
-                      className="w-full shrink-0 flex flex-col justify-between min-h-[350px] sm:min-h-[220px] px-1"
+                      className="w-full shrink-0 flex flex-col justify-between min-h-[290px] sm:min-h-[220px] pl-14 pr-2 sm:px-1"
                     >
                       <motion.div
                         animate={{
@@ -497,7 +489,7 @@ export function TestimonialsSection() {
                           ))}
                         </div>
 
-                        <blockquote className="mt-8 text-base sm:text-lg leading-relaxed text-foreground/80 font-normal italic">
+                        <blockquote className="mt-4 sm:mt-8 text-sm sm:text-lg leading-relaxed text-foreground/80 font-normal italic">
                           &ldquo;{t.text}&rdquo;
                         </blockquote>
                       </motion.div>
@@ -510,9 +502,9 @@ export function TestimonialsSection() {
                         transition={{ duration: 0.4, delay: 0.08, ease: "easeOut" }}
                       >
                         {/* Delicate Divider Line */}
-                        <div className="h-[1px] w-full bg-border/40 my-8" />
+                        <div className="h-[1px] w-full bg-border/40 my-4 sm:my-8" />
 
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
                           <figcaption className="flex items-center gap-3.5">
                             <div
                               className={`h-11 w-11 rounded-full flex items-center justify-center font-bold text-sm border ${t.badgeColor}`}
