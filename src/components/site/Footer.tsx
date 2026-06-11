@@ -74,9 +74,9 @@ export function Footer() {
       {/* Main Grid Content */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 grid grid-cols-12 gap-y-8 gap-x-4 md:gap-8 lg:gap-12 relative z-10">
 
-        {/* Left Brand Segment (Centered on mobile, left-aligned on desktop) */}
-        <div className="col-span-12 md:col-span-5 space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
-          <div className="flex flex-row items-center justify-center md:justify-start gap-3">
+        {/* Left Brand Segment (Left-aligned on mobile and desktop) */}
+        <div className="col-span-12 md:col-span-5 space-y-4 flex flex-col items-start text-left">
+          <div className="flex flex-row items-center justify-start gap-3">
             <motion.img
               whileHover={{ rotate: 10, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
@@ -87,7 +87,7 @@ export function Footer() {
               height={44}
               className="h-11 w-11 rounded-full object-cover border border-accent-blue/20 bg-card shadow-soft"
             />
-            <div className="flex flex-col items-center md:items-start gap-1">
+            <div className="flex flex-col items-start gap-1">
               <span className="text-xl font-bold tracking-tight text-foreground/90 font-sans leading-none">
                 Junior Junction
               </span>
@@ -96,10 +96,10 @@ export function Footer() {
               </svg>
             </div>
           </div>
-          <p className="max-w-sm text-xs sm:text-sm leading-relaxed text-muted-foreground/90 font-medium text-center md:text-left mx-auto md:mx-0">
+          <p className="max-w-sm text-xs sm:text-sm leading-relaxed text-muted-foreground/90 font-medium text-left">
             A joyful preschool in Erode where little minds learn, play, and grow with confidence. Providing a premium, modern, and caring environment.
           </p>
-          <div className="flex justify-center md:justify-start gap-3 pt-1">
+          <div className="flex justify-start gap-3 pt-1">
             {[
               { Icon: Instagram, href: "https://www.instagram.com/junior_junction_preschool/", color: "hover:bg-pink-500 hover:shadow-pink-500/25", label: "Instagram" },
               { Icon: Facebook, href: "https://www.facebook.com/p/junior_junction_erode-100089342184125/", color: "hover:bg-blue-600 hover:shadow-blue-600/25", label: "Facebook" },
@@ -121,8 +121,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Center-Left: Quick Links (Centered on mobile, left-aligned on desktop) */}
-        <div className="col-span-6 min-[400px]:col-span-4 md:col-span-2 space-y-3 flex flex-col items-center md:items-start text-center md:text-left">
+        {/* Center-Left: Quick Links (Left-aligned on mobile and desktop) */}
+        <div className="col-span-6 min-[400px]:col-span-4 md:col-span-2 space-y-3 flex flex-col items-start text-left">
           <h4 className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent-blue/70 mb-2.5 sm:mb-4 block">
             Quick Links
           </h4>
@@ -147,8 +147,8 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Center-Right: Programs (Centered on mobile, left-aligned on desktop) */}
-        <div className="col-span-6 min-[400px]:col-span-4 md:col-span-2 space-y-3 flex flex-col items-center md:items-start text-center md:text-left">
+        {/* Center-Right: Programs (Left-aligned on mobile and desktop) */}
+        <div className="col-span-6 min-[400px]:col-span-4 md:col-span-2 space-y-3 flex flex-col items-start text-left">
           <h4 className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent-blue/70 mb-2.5 sm:mb-4 block">
             Programs
           </h4>
@@ -163,13 +163,13 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Right Segment: Contact Details (Centered block on mobile, left-aligned on desktop) */}
-        <div className="col-span-12 min-[400px]:col-span-4 md:col-span-3 space-y-3 flex flex-col items-center md:items-start text-center md:text-left">
+        {/* Right Segment: Contact Details (Left-aligned on mobile and desktop) */}
+        <div className="col-span-12 min-[400px]:col-span-4 md:col-span-3 space-y-3 flex flex-col items-start text-left">
           <h4 className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent-blue/70 mb-2.5 sm:mb-4 block">
             Contact
           </h4>
-          <div className="w-full flex flex-col items-center md:items-start">
-            <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-foreground/75 inline-flex flex-col items-start justify-center text-left">
+          <div className="w-full flex flex-col items-start">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-foreground/75 flex flex-col items-start justify-start text-left">
               <li className="flex items-start gap-2.5 py-0.5">
                 <Phone className="h-4 w-4 text-accent-blue/80 shrink-0 mt-0.5" />
                 <a href="tel:+914244208777" className="hover:text-accent-blue transition-colors duration-200">

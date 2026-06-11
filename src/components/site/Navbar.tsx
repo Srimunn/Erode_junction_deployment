@@ -31,7 +31,7 @@ export function Navbar() {
       <nav
         className={`glass flex w-full max-w-7xl items-center justify-between rounded-full border px-3.5 sm:px-6 transition-all duration-500 animate-navbar-breath ${
           scrolled
-            ? "shadow-float py-1.5 sm:py-2 bg-white/80 border-white/85 scale-[0.99] backdrop-blur-2xl"
+            ? "shadow-float py-1.5 sm:py-2 bg-white/95 md:bg-white/80 border-white/90 md:border-white/85 scale-[0.99] backdrop-blur-2xl"
             : "shadow-soft py-2.5 sm:py-3.5 border-white/60"
         }`}
       >
