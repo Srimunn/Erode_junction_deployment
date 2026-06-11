@@ -479,7 +479,7 @@ function CelebrationsPage() {
         <section className="lg:col-span-7 flex flex-col justify-center items-center order-1 lg:order-2 px-4 relative min-h-[460px] lg:min-h-0">
 
           {/* Card Deck Wrapper */}
-          <div className="relative w-full max-w-lg aspect-[4/5] flex items-center justify-center">
+          <div className="relative w-full max-w-lg aspect-auto sm:aspect-[4/5] flex items-center justify-center min-h-[480px] sm:h-full">
 
             {/* Shuffling Card Animation */}
             <AnimatePresence mode="popLayout">
@@ -489,7 +489,7 @@ function CelebrationsPage() {
                 animate={{ opacity: 1, scale: 1, rotate: activeIndex % 2 === 0 ? 2.5 : -2.5, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, rotate: 12, y: -90 }}
                 transition={{ type: "spring", stiffness: 260, damping: 25 }}
-                className="absolute inset-0 bg-white rounded-[28px] border border-neutral-200/50 shadow-float p-5 flex flex-col justify-between"
+                className="relative sm:absolute inset-auto sm:inset-0 w-full h-auto sm:h-full bg-white rounded-[28px] border border-neutral-200/50 shadow-float p-4.5 sm:p-5 flex flex-col justify-between"
                 style={{ transformOrigin: "bottom center" }}
               >
 
@@ -561,8 +561,8 @@ function CelebrationsPage() {
             </AnimatePresence>
 
             {/* Backing structural cards to simulate a real stack */}
-            <div className="absolute inset-0 bg-neutral-100 rounded-[28px] border border-neutral-200/20 -z-10 transform translate-y-3 translate-x-2 rotate-3 scale-98 pointer-events-none opacity-80" />
-            <div className="absolute inset-0 bg-neutral-200 rounded-[28px] border border-neutral-200/10 -z-20 transform translate-y-5 -translate-x-1.5 -rotate-2 scale-96 pointer-events-none opacity-40" />
+            <div className="absolute inset-0 bg-neutral-100 rounded-[28px] border border-neutral-200/20 -z-10 transform translate-y-3 translate-x-2 rotate-3 scale-98 pointer-events-none opacity-80 hidden sm:block" />
+            <div className="absolute inset-0 bg-neutral-200 rounded-[28px] border border-neutral-200/10 -z-20 transform translate-y-5 -translate-x-1.5 -rotate-2 scale-96 pointer-events-none opacity-40 hidden sm:block" />
 
           </div>
 

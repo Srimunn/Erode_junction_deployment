@@ -209,7 +209,7 @@ function StaffPage() {
                     damping: 24,
                     delay: index * 0.1,
                   }}
-                  className={`group relative rounded-[36px] border border-neutral-200/50 shadow-soft hover:shadow-float p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center sm:items-stretch overflow-hidden transition-all duration-500 cursor-default ${member.rotationClass} ${member.glowColor}`}
+                  className={`group relative rounded-[28px] sm:rounded-[36px] border border-neutral-200/50 shadow-soft hover:shadow-float p-4.5 sm:p-8 flex flex-row gap-4 sm:gap-6 items-center sm:items-stretch overflow-hidden transition-all duration-500 cursor-default ${member.rotationClass} ${member.glowColor}`}
                 >
                   {/* Base white surface and soft overlay gradient */}
                   <div className="absolute inset-0 bg-white -z-10" />
@@ -219,8 +219,8 @@ function StaffPage() {
                   <div className="absolute top-4 right-4 h-3 w-3 rounded-full bg-neutral-200 group-hover:bg-accent-red transition-colors duration-300" />
 
                   {/* Left Side: Portrait Photo Frame */}
-                  <div className="w-full sm:w-[180px] shrink-0 flex items-center justify-center">
-                    <div className="relative aspect-square w-full sm:w-[180px] rounded-[24px] overflow-hidden border-4 border-white shadow-soft bg-white group-hover:scale-[1.02] transition-transform duration-500">
+                  <div className="shrink-0 flex items-center justify-center">
+                    <div className="relative aspect-square h-20 w-20 min-[375px]:h-24 min-[375px]:w-24 sm:h-[180px] sm:w-[180px] rounded-full sm:rounded-[24px] overflow-hidden border-2 sm:border-4 border-white shadow-soft bg-white group-hover:scale-[1.02] transition-transform duration-500">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -233,31 +233,27 @@ function StaffPage() {
                   </div>
 
                   {/* Right Side: Detailed Profile Content */}
-                  <div className="flex-1 flex flex-col justify-between text-left">
+                  <div className="flex-1 flex flex-col justify-center sm:justify-between text-left">
                     <div>
-                      <div className="mb-3.5 select-none">
-                        <span className={`inline-block px-4 py-1.5 rounded-xl text-xs md:text-sm font-black tracking-widest whitespace-nowrap uppercase border-2 shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? '-rotate-1.5' : 'rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
+                      <div className="mb-2 sm:mb-3.5 select-none">
+                        <span className={`inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-xs md:text-sm font-black tracking-widest whitespace-nowrap uppercase border-2 shadow-[2px_2px_0px_rgba(0,0,0,0.12)] sm:shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? '-rotate-1.5' : 'rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
                           {member.role}
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-black text-neutral-800 tracking-tight group-hover:text-accent-red transition-colors duration-300">
+                      <h3 className="text-sm min-[375px]:text-base sm:text-xl font-black text-neutral-800 tracking-tight leading-snug group-hover:text-accent-red transition-colors duration-300">
                         {member.name}
                       </h3>
 
-                      <div className="flex flex-wrap gap-1.5 mt-2">
+                      <div className="flex flex-col items-start gap-1 mt-1.5 sm:mt-3">
                         {member.qualifications.map((q) => (
-                          <span key={q} className="inline-flex items-center gap-1 text-[10px] font-bold text-neutral-600 bg-neutral-50/65 px-2.5 py-0.5 rounded-full border border-neutral-200/50 shadow-[1px_1px_2px_rgba(0,0,0,0.02)] select-none">
-                            <GraduationCap className={`h-3 w-3 ${member.badgeText}`} />
+                          <span key={q} className="inline-flex items-center gap-1 text-[9px] min-[375px]:text-[10px] sm:text-xs font-semibold text-neutral-600 bg-neutral-50/65 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full border border-neutral-200/50 shadow-[1px_1px_2px_rgba(0,0,0,0.02)] select-none">
+                            <GraduationCap className={`h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 ${member.badgeText}`} />
                             {q}
                           </span>
                         ))}
                       </div>
-
-
                     </div>
-
-
                   </div>
                 </motion.div>
               );
@@ -287,15 +283,15 @@ function StaffPage() {
                     damping: 22,
                     delay: 0.2 + index * 0.1,
                   }}
-                  className={`group relative rounded-[32px] border border-neutral-200/50 shadow-soft hover:shadow-float p-5 flex flex-col justify-between overflow-hidden transition-all duration-500 cursor-default ${member.rotationClass} ${member.glowColor}`}
+                  className={`group relative rounded-[28px] md:rounded-[32px] border border-neutral-200/50 shadow-soft hover:shadow-float p-4.5 md:p-5 flex flex-col justify-between overflow-hidden transition-all duration-500 cursor-default ${member.rotationClass} ${member.glowColor}`}
                 >
                   {/* Base white surface and soft overlay gradient */}
                   <div className="absolute inset-0 bg-white -z-10" />
                   <div className={`absolute inset-0 bg-gradient-to-br ${member.themeColor} -z-10`} />
 
-                  <div>
+                  <div className="flex flex-row md:flex-col gap-4 md:gap-0 w-full items-center md:items-stretch">
                     {/* Photo Frame */}
-                    <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-neutral-200/50 shadow-soft bg-white mb-5 group-hover:border-neutral-300/60 transition-colors duration-500">
+                    <div className="relative aspect-square h-20 w-20 min-[375px]:h-24 min-[375px]:w-24 md:h-auto md:w-full shrink-0 rounded-full md:rounded-2xl overflow-hidden border-2 md:border border-white md:border-neutral-200/50 shadow-soft bg-white mb-0 md:mb-5 group-hover:border-neutral-300/60 transition-colors duration-500">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -307,32 +303,28 @@ function StaffPage() {
                     </div>
 
                     {/* Meta info */}
-                    <div className="text-left px-1">
-                      <div className="mb-3 select-none">
-                        <span className={`inline-block px-3 py-1.5 rounded-xl text-[10px] md:text-[11px] font-black tracking-wider whitespace-nowrap uppercase border-2 shadow-[3px_3px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? 'rotate-1.5' : '-rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
+                    <div className="flex-1 text-left px-0 md:px-1 flex flex-col justify-center">
+                      <div className="mb-2 md:mb-3 select-none">
+                        <span className={`inline-block px-3 py-1 rounded-lg text-[9px] min-[375px]:text-[10px] md:text-[11px] font-black tracking-wider whitespace-nowrap uppercase border-2 shadow-[2px_2px_0px_rgba(0,0,0,0.12)] transform ${index % 2 === 0 ? 'rotate-1.5' : '-rotate-1.5'} hover:rotate-0 transition-transform duration-300 ${member.badgeBg} ${member.badgeText}`}>
                           {member.role}
                         </span>
                       </div>
 
-                      <h3 className="text-lg font-black text-neutral-800 tracking-tight leading-snug group-hover:text-accent-blue transition-colors duration-300">
+                      <h3 className="text-sm min-[375px]:text-base md:text-lg font-black text-neutral-800 tracking-tight leading-snug group-hover:text-accent-blue transition-colors duration-300">
                         {member.name}
                       </h3>
 
                       {/* Multi-line credentials list */}
-                      <div className="flex flex-wrap gap-1 gap-y-1.5 mt-2.5 min-h-[36px]">
+                      <div className="flex flex-col items-start gap-1 mt-1.5 md:mt-3">
                         {member.qualifications.map((q) => (
-                          <span key={q} className="inline-flex items-center gap-1 text-[9px] font-bold text-neutral-600 bg-neutral-50/65 px-2 py-0.5 rounded-full border border-neutral-200/50 shadow-[1px_1px_2px_rgba(0,0,0,0.02)] select-none">
-                            <GraduationCap className={`h-2.5 w-2.5 ${member.badgeText}`} />
+                          <span key={q} className="inline-flex items-center gap-1 text-[9px] min-[375px]:text-[10px] font-semibold text-neutral-600 bg-neutral-50/65 px-2.5 py-1 rounded-full border border-neutral-200/50 shadow-[1px_1px_2px_rgba(0,0,0,0.02)] select-none">
+                            <GraduationCap className={`h-2.5 w-2.5 md:h-3 md:w-3 ${member.badgeText}`} />
                             {q}
                           </span>
                         ))}
                       </div>
-
-
                     </div>
                   </div>
-
-
                 </motion.div>
               );
             })}

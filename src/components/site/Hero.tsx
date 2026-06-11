@@ -68,7 +68,7 @@ export function Hero() {
   } as const;
 
   return (
-    <section className="relative overflow-hidden px-4 pt-32 pb-20 sm:pt-36 bg-white min-h-screen flex flex-col justify-center items-center">
+    <section className="relative overflow-hidden px-4 pt-24 pb-12 sm:pt-36 sm:pb-20 bg-white min-h-[85vh] lg:min-h-screen flex flex-col justify-center items-center">
       {/* Soft Background Breathing Radial Gradient */}
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-tr from-accent-blue/[0.015] via-white to-accent-red/[0.015] animate-pulse"
@@ -97,21 +97,21 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="mx-auto max-w-[1280px] w-full px-4 md:px-8 flex flex-col items-center justify-center transition-transform duration-300 ease-out"
+        className="mx-auto max-w-[1280px] w-full px-2.5 md:px-8 flex flex-col items-center justify-center transition-transform duration-300 ease-out"
         style={{
           transform: `perspective(1000px) rotateY(${mousePos.x * 0.05}deg) rotateX(${mousePos.y * -0.05}deg)`,
         }}
       >
         {/* Responsive Grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center w-full mb-12 sm:mb-16">
           {/* Left Column: Left-aligned Typography */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
 
 
             {/* Clean Premium Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-[34px] min-[375px]:text-[40px] min-[450px]:text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight font-sans mb-6 text-foreground/95 select-none"
+              className="text-[34px] min-[375px]:text-[40px] min-[450px]:text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight font-sans mb-4 sm:mb-6 text-foreground/95 select-none"
             >
               Where Little Minds <br />
               <span className="relative mt-2 inline-block font-extrabold bg-gradient-to-r from-accent-blue via-indigo-600 to-accent-red bg-clip-text text-transparent">
@@ -122,7 +122,7 @@ export function Hero() {
             {/* Elegant Minimal Subtitle */}
             <motion.p
               variants={itemVariants}
-              className="text-lg text-muted-foreground/80 sm:text-xl leading-relaxed tracking-wide mb-8 font-light max-w-xl"
+              className="text-base sm:text-xl text-muted-foreground/80 leading-relaxed tracking-wide mb-6 sm:mb-8 font-light max-w-xl"
             >
               A <span className="text-foreground/90 font-medium">joyful</span> preschool nurturing{" "}
               <span className="text-foreground/90 font-medium">creativity</span>,{" "}
@@ -134,7 +134,7 @@ export function Hero() {
             {/* Premium CTA Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap items-center gap-4 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center lg:justify-start"
             >
               <Link
                 to="/contact"
@@ -148,12 +148,12 @@ export function Hero() {
           </div>
 
           {/* Right Column: Overlapping, Interactive visual card collage */}
-          <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[450px] flex items-center justify-center">
+          <div className="lg:col-span-5 relative w-full h-[300px] min-[400px]:h-[360px] sm:h-[450px] md:h-[500px] lg:h-[520px] flex items-center justify-center">
             {/* Card 1: Bottom / Back (Art & Craft) */}
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: -2, zIndex: 10, y: -5 }}
-              className="absolute left-2 top-4 w-[140px] min-[375px]:w-[170px] min-[450px]:w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[4px] sm:border-[6px] golden-border shadow-card rotate-[-8deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-0"
+              className="absolute left-[10%] sm:left-[4%] top-[8%] sm:top-[10%] w-[130px] min-[400px]:w-[155px] sm:w-[210px] md:w-[240px] lg:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[3px] sm:border-[6px] golden-border shadow-card rotate-[-8deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-0"
             >
               <img
                 src={cardImg3}
@@ -169,7 +169,7 @@ export function Hero() {
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: 2, zIndex: 10, y: -5 }}
-              className="absolute right-2 top-12 w-[140px] min-[375px]:w-[170px] min-[450px]:w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[4px] sm:border-[6px] golden-border shadow-card rotate-[6deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-1"
+              className="absolute right-[10%] sm:right-[4%] top-[16%] sm:top-[18%] w-[130px] min-[400px]:w-[155px] sm:w-[210px] md:w-[240px] lg:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[3px] sm:border-[6px] golden-border shadow-card rotate-[6deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-1"
             >
               <img
                 src={cardImg2}
@@ -185,7 +185,7 @@ export function Hero() {
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.05, rotate: -1, zIndex: 10, y: -5 }}
-              className="absolute left-10 min-[375px]:left-14 bottom-2 w-[140px] min-[375px]:w-[170px] min-[450px]:w-[220px] sm:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[4px] sm:border-[6px] golden-border shadow-float rotate-[-2deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-2"
+              className="absolute left-[calc(50%-65px)] min-[400px]:left-[calc(50%-77.5px)] sm:left-[calc(50%-105px)] md:left-[calc(50%-120px)] lg:left-[calc(50%-130px)] bottom-[6%] w-[130px] min-[400px]:w-[155px] sm:w-[210px] md:w-[240px] lg:w-[260px] aspect-[3/4] rounded-3xl overflow-hidden border-[3px] sm:border-[6px] golden-border shadow-float rotate-[-2deg] bg-white cursor-pointer origin-center transition-all duration-300 hover:shadow-float z-2"
             >
               <img
                 src={cardImg1}

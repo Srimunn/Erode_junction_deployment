@@ -19,7 +19,7 @@ import {
   Compass,
   Navigation,
 } from "lucide-react";
-import aboutImg from "@/assets/about-classroom.webp";
+import aboutImg from "@/assets/about-play-sand.jpg";
 import img2 from "@/assets/hero-2-play.webp";
 import logoImg from "@/assets/logo.webp";
 import pencileImg from "@/assets/pencile.webp";
@@ -65,32 +65,32 @@ const aboutPoints = [
 
 export function AboutSection() {
   return (
-    <section className="relative overflow-hidden px-4 py-12 sm:py-20 md:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
+    <section className="relative overflow-hidden px-4 py-8 sm:py-20 md:py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-4 sm:gap-16 grid-cols-2">
         {/* Left Column: Visual Overlapping Collage */}
-        <div className="relative group">
+        <div className="relative group w-full mx-auto min-w-0">
           {/* Faint ambient background glows */}
           <div className="pointer-events-none absolute -left-10 -top-10 -z-10 h-72 w-72 rounded-full bg-accent-blue/10 blur-3xl animate-float-slow" />
           <div className="pointer-events-none absolute -right-10 -bottom-10 -z-10 h-72 w-72 rounded-full bg-accent-red/10 blur-3xl animate-float" />
 
           {/* Main classroom image with elegant border */}
-          <div className="overflow-hidden rounded-[40px] shadow-float border-[6px] golden-border bg-white p-2">
+          <div className="overflow-hidden rounded-2xl sm:rounded-[40px] shadow-float border-2 sm:border-[6px] golden-border bg-white p-1 sm:p-2">
             <img
               src={aboutImg}
               alt="Bright modern preschool classroom"
               width={1024}
               height={1024}
               loading="lazy"
-              className="aspect-square w-full object-cover rounded-[32px] transition-transform duration-700 hover:scale-[1.03]"
+              className="aspect-square w-full object-cover rounded-xl sm:rounded-[32px] transition-transform duration-700 hover:scale-[1.03]"
             />
           </div>
 
           {/* Overlapping secondary floating card (Play Time) */}
           <motion.div
             whileHover={{ scale: 1.04, rotate: 1 }}
-            className="absolute -bottom-8 -right-4 hidden rounded-[28px] border-2 golden-border bg-white/90 backdrop-blur-md p-3.5 shadow-float sm:flex items-center gap-4 max-w-[285px] z-10 cursor-pointer"
+            className="absolute -bottom-2 -right-1 flex rounded-xl border golden-border bg-white/90 backdrop-blur-md p-1 shadow-soft items-center gap-1.5 max-w-[120px] min-[400px]:max-w-[140px] sm:-bottom-8 sm:-right-4 sm:rounded-[28px] sm:border-2 sm:p-3.5 sm:gap-4 sm:max-w-[285px] z-10 cursor-pointer"
           >
-            <div className="h-16 w-16 rounded-full overflow-hidden shrink-0 shadow-soft border-2 golden-border">
+            <div className="h-6 w-6 sm:h-16 sm:w-16 rounded-full overflow-hidden shrink-0 shadow-soft border sm:border-2 golden-border">
               <img
                 src={logoImg}
                 alt="Junior Junction Logo"
@@ -101,10 +101,10 @@ export function AboutSection() {
               />
             </div>
             <div>
-              <div className="text-3xl font-extrabold text-accent-red font-sans leading-none">
+              <div className="text-xs sm:text-3xl font-extrabold text-accent-red font-sans leading-none">
                 04+
               </div>
-              <div className="text-[11px] font-bold text-muted-foreground mt-1.5 leading-tight">
+              <div className="text-[6px] min-[400px]:text-[7px] sm:text-[11px] font-bold text-muted-foreground mt-0.5 sm:mt-1.5 leading-tight">
                 Years of joyful learning & growth
               </div>
             </div>
@@ -112,30 +112,30 @@ export function AboutSection() {
         </div>
 
         {/* Right Column: Upgraded Content Card Grid */}
-        <div className="flex flex-col items-start text-left">
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.15] text-foreground/95">
+        <div className="flex flex-col items-start text-left w-full min-w-0">
+          <h2 className="text-lg min-[400px]:text-xl sm:text-5xl font-extrabold tracking-tight leading-[1.15] text-foreground/95">
             About <span className="italic text-accent-red font-sans">Junior Junction</span>
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground/80 leading-relaxed font-light">
+          <p className="mt-2 sm:mt-6 text-[10px] min-[400px]:text-xs sm:text-lg text-muted-foreground/80 leading-relaxed font-light">
             A safe, nurturing, and activity-based preschool in the heart of Erode. We blend play,
             exploration, and gentle structure so every child discovers their unique spark.
           </p>
 
           {/* Clean upgraded feature cards */}
-          <div className="mt-8 space-y-4 w-full">
+          <div className="mt-3 sm:mt-8 space-y-2 sm:space-y-4 w-full">
             {aboutPoints.map((point) => (
               <div
                 key={point.title}
-                className="flex gap-4 p-4.5 rounded-2xl border border-border/50 bg-card/40 hover:bg-card hover:border-border transition-all duration-300 hover:shadow-soft group cursor-default"
+                className="flex gap-2 sm:gap-4 p-2 sm:p-4.5 rounded-xl sm:rounded-2xl border border-border/50 bg-card/40 hover:bg-card hover:border-border transition-all duration-300 hover:shadow-soft group cursor-default"
               >
                 <div
-                  className={`grid h-12 w-12 place-items-center rounded-xl shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 border ${point.color}`}
+                  className={`grid h-8 w-8 sm:h-12 sm:w-12 place-items-center rounded-lg sm:rounded-xl shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 border ${point.color}`}
                 >
-                  <point.icon className="h-5 w-5" />
+                  <point.icon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground/90 text-base">{point.title}</h4>
-                  <p className="text-sm text-muted-foreground/80 mt-1 leading-relaxed">
+                  <h4 className="font-bold text-foreground/90 text-[10px] min-[400px]:text-xs sm:text-base leading-snug">{point.title}</h4>
+                  <p className="text-[9px] min-[400px]:text-[10px] sm:text-sm text-muted-foreground/80 mt-0.5 leading-relaxed">
                     {point.desc}
                   </p>
                 </div>
@@ -145,10 +145,10 @@ export function AboutSection() {
 
           <Link
             to="/about"
-            className="group mt-10 inline-flex items-center gap-2 rounded-full bg-foreground hover:bg-foreground/90 px-8 py-4 text-base font-bold text-background transition-all duration-300 hover:scale-[1.03] shadow-soft hover:shadow-card cursor-pointer"
+            className="group mt-4 sm:mt-10 inline-flex items-center gap-1.5 rounded-full bg-foreground hover:bg-foreground/90 px-4 py-2 sm:px-8 sm:py-4 text-xs sm:text-base font-bold text-background transition-all duration-300 hover:scale-[1.03] shadow-soft hover:shadow-card cursor-pointer"
           >
             Learn more about us
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
@@ -581,13 +581,13 @@ export function LocationsSection() {
 
 
 
-        <div className="grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto items-stretch">
+        <div className="grid gap-3 min-[400px]:gap-4 md:gap-8 grid-cols-2 max-w-6xl mx-auto items-stretch">
           {campusData.map((loc) => (
             <motion.div
               key={loc.id}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 120, damping: 18 }}
-              className="group relative rounded-[36px] border-[6px] golden-border bg-white p-6 sm:p-8 shadow-soft hover:shadow-float flex flex-col justify-between overflow-hidden text-left"
+              className="group relative rounded-2xl sm:rounded-[36px] border-2 sm:border-[6px] golden-border bg-white p-2.5 min-[400px]:p-3 sm:p-8 shadow-soft hover:shadow-float flex flex-col justify-between overflow-hidden text-left min-w-0"
             >
               {/* Decorative Campus-Specific Glow */}
               <div
@@ -597,17 +597,17 @@ export function LocationsSection() {
 
               <div>
                 {/* Header with Title and Badge */}
-                <div className="flex items-center justify-between gap-4 flex-wrap mb-6">
-                  <h3 className="text-2xl font-black tracking-tight text-foreground/90 leading-tight">
+                <div className="flex flex-col min-[450px]:flex-row min-[450px]:items-center justify-between gap-1.5 min-[450px]:gap-4 mb-3 sm:mb-6">
+                  <h3 className="text-[10px] min-[400px]:text-xs min-[450px]:text-sm sm:text-2xl font-black tracking-tight text-foreground/90 leading-tight">
                     {loc.title}
                   </h3>
-                  <span className={`inline-block rounded-full px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider ${loc.badgeStyle}`}>
+                  <span className={`inline-block rounded-full px-2 py-0.5 sm:px-3.5 sm:py-1 text-[7px] sm:text-[10px] font-extrabold uppercase tracking-wider self-start min-[450px]:self-auto ${loc.badgeStyle}`}>
                     {loc.badge}
                   </span>
                 </div>
 
                 {/* Interactive Google Map Embed (Differentiated!) */}
-                <div className="relative rounded-2xl overflow-hidden aspect-[16/9] mb-6 shadow-inner border border-border/50 bg-muted">
+                <div className="relative rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] mb-3 sm:mb-6 shadow-inner border border-border/50 bg-muted">
                   <iframe
                     src={loc.embedUrl}
                     width="100%"
@@ -622,27 +622,27 @@ export function LocationsSection() {
                 </div>
 
                 {/* Features List */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1 mb-3 sm:mb-6">
                   {loc.features.map((feat, i) => (
-                    <span key={i} className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-xl bg-soft/50 text-muted-foreground border border-border/30">
-                      <Sparkles className="h-3 w-3 text-amber-500 shrink-0" />
+                    <span key={i} className="inline-flex items-center gap-1 text-[8px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-3 sm:py-1.5 rounded-lg bg-soft/50 text-muted-foreground border border-border/30">
+                      <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-amber-500 shrink-0" />
                       {feat}
                     </span>
                   ))}
                 </div>
 
                 {/* Address details */}
-                <div className="space-y-4 pt-5 border-t border-border/40">
-                  <div className="flex gap-4">
-                    <div className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-muted/50 ${loc.pinColor}`}>
-                      <MapPin className="h-5 w-5" />
+                <div className="space-y-2 sm:space-y-4 pt-3 sm:pt-5 border-t border-border/40">
+                  <div className="flex gap-1.5 sm:gap-4 items-start">
+                    <div className={`grid h-6 w-6 sm:h-9 sm:w-9 shrink-0 place-items-center rounded-lg bg-muted/50 text-xs sm:text-base ${loc.pinColor}`}>
+                      <MapPin className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-foreground/80 leading-relaxed">
+                      <p className="text-[8px] min-[400px]:text-[9px] sm:text-sm font-bold text-foreground/80 leading-normal sm:leading-relaxed">
                         {loc.address}
                       </p>
                       {loc.landmark && (
-                        <p className="text-xs text-muted-foreground mt-1.5 font-bold">
+                        <p className="text-[7px] min-[400px]:text-[8px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1.5 font-bold">
                           Landmark: {loc.landmark}
                         </p>
                       )}
@@ -651,47 +651,33 @@ export function LocationsSection() {
                 </div>
 
                 {/* Contacts block */}
-                <div className="space-y-3 pt-5 border-t border-border/40">
+                <div className="space-y-1.5 sm:space-y-3 pt-3 sm:pt-5 border-t border-border/40">
                   {loc.contacts.map((contact, idx) => (
-                    <div key={idx} className="flex gap-4 items-center">
-                      <div className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-muted/50 ${contact.type === "whatsapp" ? "text-emerald-600" : "text-accent-blue"}`}>
+                    <div key={idx} className="flex gap-1.5 sm:gap-4 items-center">
+                      <div className={`grid h-6 w-6 sm:h-9 sm:w-9 shrink-0 place-items-center rounded-lg bg-muted/50 ${contact.type === "whatsapp" ? "text-emerald-600" : "text-accent-blue"}`}>
                         {contact.type === "whatsapp" ? (
-                          <WhatsAppIcon className="h-5 w-5" />
+                          <WhatsAppIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
                         ) : (
-                          <Phone className="h-5 w-5" />
+                          <Phone className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
                         )}
                       </div>
-                      <div className="text-sm font-bold text-foreground/85 flex flex-wrap gap-x-2 gap-y-1 items-center">
-                        <span className="text-xs font-semibold text-muted-foreground mr-1">{contact.label}:</span>
-                        {loc.id === "main" && contact.values.length > 1 ? (
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-x-2 gap-y-0.5">
-                            {contact.values.map((val, valIdx) => (
-                              <div key={valIdx} className="inline-flex items-center">
-                                <a
-                                  href={contact.hrefs[valIdx]}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="hover:text-accent-blue transition-colors cursor-pointer hover:underline"
-                                >
-                                  {val}
-                                </a>
-                                {valIdx < contact.values.length - 1 && <span className="text-muted-foreground/50 ml-2 hidden sm:inline">|</span>}
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          contact.values.map((val, valIdx) => (
-                            <a
-                              key={valIdx}
-                              href={contact.hrefs[valIdx]}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="hover:text-accent-blue transition-colors cursor-pointer hover:underline"
-                            >
-                              {val}
-                            </a>
-                          ))
-                        )}
+                      <div className="text-[8px] min-[400px]:text-[9px] sm:text-sm font-bold text-foreground/85 flex items-center w-full">
+                        <span className="text-[7px] min-[400px]:text-[8px] sm:text-xs font-semibold text-muted-foreground w-[68px] min-[400px]:w-[78px] sm:w-[130px] shrink-0">{contact.label}:</span>
+                        <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-x-1 sm:gap-x-2 gap-y-0.5">
+                          {contact.values.map((val, valIdx) => (
+                            <div key={valIdx} className="inline-flex items-center">
+                              <a
+                                href={contact.hrefs[valIdx]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-accent-blue transition-colors cursor-pointer hover:underline"
+                              >
+                                {val}
+                              </a>
+                              {valIdx < contact.values.length - 1 && <span className="text-muted-foreground/50 ml-1.5 hidden sm:inline">|</span>}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -699,16 +685,16 @@ export function LocationsSection() {
               </div>
 
               {/* Navigation CTA button */}
-              <div className="mt-8 pt-6 border-t border-border/40">
+              <div className="mt-4 sm:mt-8 pt-3 sm:pt-6 border-t border-border/40">
                 <a
                   href={loc.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`}
+                  className={`w-full inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-2 py-2 sm:px-6 sm:py-4 text-[8px] min-[400px]:text-[10px] sm:text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`}
                 >
-                  <Navigation className="h-5 w-5 animate-pulse" />
+                  <Navigation className="h-3.5 w-3.5 sm:h-5 sm:w-5 animate-pulse" />
                   Get Navigation Map
-                  <ExternalLink className="h-4 w-4 ml-1" />
+                  <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 ml-0.5 sm:ml-1" />
                 </a>
               </div>
             </motion.div>

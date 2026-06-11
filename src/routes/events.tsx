@@ -407,7 +407,7 @@ function EventsPage() {
                       style={{ transformStyle: "preserve-3d" }}
                     >
                       {/* Left side: Information details */}
-                      <div className="lg:col-span-5 space-y-6">
+                      <div className="lg:col-span-5 space-y-6 order-2 lg:order-1">
                         <motion.div 
                           initial={{ opacity: 0, y: 15 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -505,7 +505,7 @@ function EventsPage() {
                       </div>
 
                       {/* Right side: High-end 3D tilt picture slate */}
-                      <div className="lg:col-span-7 flex justify-center items-center" style={{ perspective: 1200 }}>
+                      <div className="lg:col-span-7 flex justify-center items-center order-1 lg:order-2" style={{ perspective: 1200 }}>
                         <motion.div
                           whileHover={{ rotateY: -6, rotateX: 4, scale: 1.02, z: 15 }}
                           animate={{
@@ -526,7 +526,7 @@ function EventsPage() {
                             boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" },
                             borderColor: { duration: 3, repeat: Infinity, ease: "easeInOut" }
                           }}
-                          className="group relative w-full aspect-[4/3] rounded-[32px] overflow-hidden border-[8px] transform-gpu"
+                          className="group relative w-full aspect-[4/3] rounded-[24px] sm:rounded-[32px] overflow-hidden border-4 sm:border-[8px] transform-gpu"
                         >
                           <img
                             src={activeItem.src}

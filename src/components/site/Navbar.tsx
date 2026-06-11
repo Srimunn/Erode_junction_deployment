@@ -27,40 +27,40 @@ export function Navbar() {
   useEffect(() => setOpen(false), [location.pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 animate-nav-slide">
+    <header className="fixed inset-x-0 top-3 sm:top-4 z-50 flex justify-center px-2.5 sm:px-4 animate-nav-slide">
       <nav
-        className={`glass flex w-full max-w-7xl items-center justify-between rounded-full border px-6 transition-all duration-500 animate-navbar-breath ${
+        className={`glass flex w-full max-w-7xl items-center justify-between rounded-full border px-3.5 sm:px-6 transition-all duration-500 animate-navbar-breath ${
           scrolled
-            ? "shadow-float py-2 bg-white/80 border-white/85 scale-[0.99] backdrop-blur-2xl"
-            : "shadow-soft py-3.5 border-white/60"
+            ? "shadow-float py-1.5 sm:py-2 bg-white/80 border-white/85 scale-[0.99] backdrop-blur-2xl"
+            : "shadow-soft py-2.5 sm:py-3.5 border-white/60"
         }`}
       >
-        <Link to="/" className="flex items-center gap-3 hover:opacity-100 transition-opacity group">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-100 transition-opacity group">
           <motion.div
             whileHover={{ scale: 1.03, x: 2 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 450, damping: 20 }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-2 sm:gap-3"
           >
-            <div className="relative">
+            <div className="relative shrink-0">
               <img
                 src={logoImg}
                 alt="Junior Junction Logo"
                 loading="eager"
                 width={72}
                 height={72}
-                className="h-18 w-18 rounded-full object-contain border-2 border-white shadow-soft transition-transform duration-500 hover:scale-[1.06] animate-logo-float-premium"
+                className="h-12 w-12 sm:h-16 sm:w-16 bg-white rounded-full object-contain border-2 border-white shadow-soft transition-transform duration-500 hover:scale-[1.06] animate-logo-float-premium"
               />
             </div>
             <div className="flex flex-col justify-center items-start text-left select-none">
               <span
-                className="text-xl font-extrabold tracking-tight text-accent-blue leading-none opacity-0 animate-fade-in-left"
+                className="text-base sm:text-xl font-extrabold tracking-tight text-accent-blue leading-none opacity-0 animate-fade-in-left"
                 style={{ animationDelay: "150ms", animationFillMode: "forwards" }}
               >
                 Junior Junction
               </span>
               <span
-                className="text-[10px] font-bold tracking-[0.25em] text-accent-red uppercase mt-1.5 ml-1 leading-none opacity-0 animate-fade-in-left"
+                className="text-[8px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-accent-red uppercase mt-1 ml-0.5 sm:ml-1 leading-none opacity-0 animate-fade-in-left hidden min-[375px]:block"
                 style={{ animationDelay: "450ms", animationFillMode: "forwards" }}
               >
                 PLAYSCHOOL, ERODE
