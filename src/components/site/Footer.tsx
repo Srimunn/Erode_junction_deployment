@@ -122,11 +122,11 @@ export function Footer() {
         </div>
 
         {/* Center-Left: Quick Links (Left-aligned on mobile and desktop) */}
-        <div className="col-span-6 min-[400px]:col-span-4 md:col-span-2 space-y-3 flex flex-col items-start text-left">
+        <div className="col-span-3 md:col-span-2 space-y-3 flex flex-col items-start text-left">
           <h4 className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent-blue/70 mb-2.5 sm:mb-4 block">
             Quick Links
           </h4>
-          <ul className="space-y-2 text-xs sm:text-sm font-medium text-foreground/75 w-full">
+          <ul className="space-y-2 text-[11px] sm:text-sm font-medium text-foreground/75 w-full">
             {[
               { to: "/", label: "Home" },
               { to: "/about", label: "About" },
@@ -148,11 +148,11 @@ export function Footer() {
         </div>
 
         {/* Center-Right: Programs (Left-aligned on mobile and desktop) */}
-        <div className="col-span-6 min-[400px]:col-span-4 md:col-span-2 space-y-3 flex flex-col items-start text-left">
+        <div className="col-span-3 md:col-span-2 space-y-3 flex flex-col items-start text-left">
           <h4 className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent-blue/70 mb-2.5 sm:mb-4 block">
             Programs
           </h4>
-          <ul className="space-y-2 text-xs sm:text-sm font-medium text-foreground/75 w-full">
+          <ul className="space-y-2 text-[11px] sm:text-sm font-medium text-foreground/75 w-full">
             {["Toddler", "Play Group", "Pre-KG", "LKG", "UKG"].map((prog) => (
               <li key={prog}>
                 <span className="hover:text-accent-blue transition-colors duration-200 py-0.5 inline-block cursor-default">
@@ -164,7 +164,7 @@ export function Footer() {
         </div>
 
         {/* Right Segment: Contact Details (Left-aligned on mobile and desktop) */}
-        <div className="col-span-12 min-[400px]:col-span-4 md:col-span-3 space-y-3 flex flex-col items-start text-left">
+        <div className="col-span-6 md:col-span-3 space-y-3 flex flex-col items-start text-left">
           <h4 className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent-blue/70 mb-2.5 sm:mb-4 block">
             Contact
           </h4>
