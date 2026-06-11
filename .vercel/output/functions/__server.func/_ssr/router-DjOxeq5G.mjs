@@ -184,7 +184,7 @@ function SplashIntro({ onComplete }) {
     }
   );
 }
-const appCss = "/assets/styles-DsY-I07Y.css";
+const appCss = "/assets/styles-BNhDVwR2.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -532,7 +532,7 @@ function Footer() {
                 href: "https://www.google.com/maps/search/?api=1&query=83%2F1%2C+2nd+Cross+Street%2C+VIP+Colony%2C+Palakattu+Thottam%2C+Perundurai+Road%2C+Erode+-+638011",
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: "hover:text-accent-blue transition-colors duration-200 leading-relaxed animate-pulse",
+                className: "hover:text-accent-blue transition-colors duration-200 leading-relaxed",
                 children: "83/1, 2nd Cross Street, VIP Colony, Palakattu Thottam, Perundurai Road, Erode - 638011"
               }
             )
@@ -745,7 +745,7 @@ const Route$4 = createFileRoute("/events")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./contact-BwbX-VFT.mjs");
+const $$splitComponentImporter$3 = () => import("./contact-CJsHr_ti.mjs");
 const Route$3 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -781,7 +781,7 @@ const Route$2 = createFileRoute("/celebrations")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-wZmU1ygN.mjs");
+const $$splitComponentImporter$1 = () => import("./about-Cfdtc8Gv.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -799,7 +799,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-CaEY5CMQ.mjs");
+const $$splitComponentImporter = () => import("./index-BpEONvuS.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

@@ -1,5 +1,5 @@
 import { j as jsxRuntimeExports } from "../_libs/react.mjs";
-import { A as AboutSection, L as LocationsSection, W as WhyChooseSection } from "./Sections-CCcnfp4B.mjs";
+import { A as AboutSection, L as LocationsSection, W as WhyChooseSection } from "./Sections-BttYl_bT.mjs";
 import "../_libs/tanstack__react-router.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
@@ -14,7 +14,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-import "./router-CtIdN7jR.mjs";
+import "./router-DjOxeq5G.mjs";
 import "../_libs/tanstack__query-core.mjs";
 import "../_libs/tanstack__react-query.mjs";
 import "../_libs/framer-motion.mjs";

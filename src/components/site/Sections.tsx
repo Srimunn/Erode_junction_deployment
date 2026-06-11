@@ -337,14 +337,6 @@ const testimonials = [
     badgeColor: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15",
   },
   {
-    name: "Aathi Ammu",
-    role: "Parent · 9 months ago",
-    text: "I am very happy to see my daughter now because if she learns some discipline and skills well, I will appreciate Junior Junction Play School and their teacher for that education And I really appreciate their teacher because the way they teach each activity is so amazing. They come forward to showcase the potential of each child thanking to Junior junction play school 💯😊",
-    rating: 5,
-    initials: "AA",
-    badgeColor: "text-emerald-600 bg-emerald-500/[0.08] border-emerald-500/15",
-  },
-  {
     name: "surya madheswaran",
     role: "Parent · 4 months ago",
     text: "My son going to this school for last 5 months. Staffs are so Friendly and taking good care of childrens.They are Keeping Different Activities time to time for Kids which my son is enjoying so much.They Engage Every Kids in all Activities like Sports,Dance.So far Good experience.",
@@ -445,7 +437,7 @@ export function TestimonialsSection() {
         {/* Carousel Wrapper */}
         <div className="relative">
           {/* Floating Pencil Graphic (Left Side) */}
-          <div className="absolute -left-4 sm:-left-34 bottom-0 sm:-bottom-4 z-20 w-24 sm:w-60 h-auto pointer-events-none animate-float">
+          <div className="absolute -left-4 sm:-left-34 bottom-0 sm:-bottom-4 z-20 w-20 sm:w-60 h-auto pointer-events-none animate-float">
             <img
               src={pencileImg}
               alt="Playful pencil character"
@@ -472,7 +464,7 @@ export function TestimonialsSection() {
                   return (
                     <div
                       key={t.name}
-                      className="w-full shrink-0 flex flex-col justify-between min-h-[290px] sm:min-h-[220px] pl-14 pr-2 sm:px-1"
+                      className="w-full shrink-0 flex flex-col justify-between min-h-[250px] sm:min-h-[220px] pl-12 pr-2 sm:px-1"
                     >
                       <motion.div
                         animate={{
@@ -489,7 +481,7 @@ export function TestimonialsSection() {
                           ))}
                         </div>
 
-                        <blockquote className="mt-4 sm:mt-8 text-sm sm:text-lg leading-relaxed text-foreground/80 font-normal italic">
+                        <blockquote className="mt-4 sm:mt-8 text-xs min-[375px]:text-sm sm:text-lg leading-relaxed text-foreground/80 font-normal italic">
                           &ldquo;{t.text}&rdquo;
                         </blockquote>
                       </motion.div>

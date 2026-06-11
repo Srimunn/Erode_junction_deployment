@@ -205,7 +205,7 @@ export function Footer() {
                   href="https://www.google.com/maps/search/?api=1&query=83%2F1%2C+2nd+Cross+Street%2C+VIP+Colony%2C+Palakattu+Thottam%2C+Perundurai+Road%2C+Erode+-+638011" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-accent-blue transition-colors duration-200 leading-relaxed animate-pulse"
+                  className="hover:text-accent-blue transition-colors duration-200 leading-relaxed"
                 >
                   83/1, 2nd Cross Street, VIP Colony, Palakattu Thottam, Perundurai Road, Erode - 638011
                 </a>

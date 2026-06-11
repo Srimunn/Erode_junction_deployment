@@ -254,20 +254,20 @@ function ContactPage() {
                     variants={cardItemVariants}
                     whileHover={{ y: -6, scale: 1.015 }}
                     onClick={() => setSelectedCard(isSelected ? null : i)}
-                    className={`backdrop-blur-xl border rounded-[28px] p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group ${isSelected ? c.selectedBg : c.cardStyle
+                    className={`backdrop-blur-xl border rounded-[28px] p-4 sm:p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group min-w-0 ${isSelected ? c.selectedBg : c.cardStyle
                       }`}
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
                       <div className={`grid h-12 w-12 shrink-0 place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedIconColor : c.color
                         }`}>
                         <c.icon className="h-5.5 w-5.5" />
                       </div>
-                      <div className="space-y-0.5">
+                      <div className="space-y-0.5 min-w-0 flex-1">
                         <span className={`text-[10px] font-extrabold uppercase tracking-wider block transition-all duration-300 ${isSelected ? c.selectedLabelColor : "text-muted-foreground/60"
                           }`}>
                           {c.label}
                         </span>
-                        <div className={`text-base font-bold leading-none transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"
+                        <div className={`text-xs min-[375px]:text-sm sm:text-base font-bold leading-tight break-all transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"
                           }`}>
                           {c.value}
                         </div>

@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-CtIdN7jR.mjs";
+import { l as logoImg } from "./router-DjOxeq5G.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -212,14 +212,6 @@ const testimonials = [
     badgeColor: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15"
   },
   {
-    name: "Aathi Ammu",
-    role: "Parent · 9 months ago",
-    text: "I am very happy to see my daughter now because if she learns some discipline and skills well, I will appreciate Junior Junction Play School and their teacher for that education And I really appreciate their teacher because the way they teach each activity is so amazing. They come forward to showcase the potential of each child thanking to Junior junction play school 💯😊",
-    rating: 5,
-    initials: "AA",
-    badgeColor: "text-emerald-600 bg-emerald-500/[0.08] border-emerald-500/15"
-  },
-  {
     name: "surya madheswaran",
     role: "Parent · 4 months ago",
     text: "My son going to this school for last 5 months. Staffs are so Friendly and taking good care of childrens.They are Keeping Different Activities time to time for Kids which my son is enjoying so much.They Engage Every Kids in all Activities like Sports,Dance.So far Good experience.",
@@ -310,7 +302,7 @@ function TestimonialsSection() {
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-muted-foreground/80 text-base sm:text-lg font-light", children: "Hear from the families who make our preschool community so special" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-4 sm:-left-34 bottom-0 sm:-bottom-4 z-20 w-24 sm:w-60 h-auto pointer-events-none animate-float", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-4 sm:-left-34 bottom-0 sm:-bottom-4 z-20 w-20 sm:w-60 h-auto pointer-events-none animate-float", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
                 src: pencileImg,
@@ -331,7 +323,7 @@ function TestimonialsSection() {
                     return /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
-                        className: "w-full shrink-0 flex flex-col justify-between min-h-[290px] sm:min-h-[220px] pl-14 pr-2 sm:px-1",
+                        className: "w-full shrink-0 flex flex-col justify-between min-h-[250px] sm:min-h-[220px] pl-12 pr-2 sm:px-1",
                         children: [
                           /* @__PURE__ */ jsxRuntimeExports.jsxs(
                             motion.div,
@@ -344,7 +336,7 @@ function TestimonialsSection() {
                               transition: { duration: 0.4, ease: "easeOut" },
                               children: [
                                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-0.5 text-amber-400/90", children: Array.from({ length: t.rating }).map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "h-4 w-4 fill-current" }, i)) }),
-                                /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: "mt-4 sm:mt-8 text-sm sm:text-lg leading-relaxed text-foreground/80 font-normal italic", children: [
+                                /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: "mt-4 sm:mt-8 text-xs min-[375px]:text-sm sm:text-lg leading-relaxed text-foreground/80 font-normal italic", children: [
                                   "“",
                                   t.text,
                                   "”"

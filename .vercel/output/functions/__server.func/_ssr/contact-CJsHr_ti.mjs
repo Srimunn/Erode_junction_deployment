@@ -159,12 +159,12 @@ function ContactPage() {
             return /* @__PURE__ */ jsxRuntimeExports.jsxs(motion.a, { href: c.href, target: "_blank", rel: "noopener noreferrer", variants: cardItemVariants, whileHover: {
               y: -6,
               scale: 1.015
-            }, onClick: () => setSelectedCard(isSelected ? null : i), className: `backdrop-blur-xl border rounded-[28px] p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group ${isSelected ? c.selectedBg : c.cardStyle}`, children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4", children: [
+            }, onClick: () => setSelectedCard(isSelected ? null : i), className: `backdrop-blur-xl border rounded-[28px] p-4 sm:p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group min-w-0 ${isSelected ? c.selectedBg : c.cardStyle}`, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 sm:gap-4 min-w-0 flex-1", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-12 w-12 shrink-0 place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedIconColor : c.color}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(c.icon, { className: "h-5.5 w-5.5" }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-0.5", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-0.5 min-w-0 flex-1", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[10px] font-extrabold uppercase tracking-wider block transition-all duration-300 ${isSelected ? c.selectedLabelColor : "text-muted-foreground/60"}`, children: c.label }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-base font-bold leading-none transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"}`, children: c.value })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-xs min-[375px]:text-sm sm:text-base font-bold leading-tight break-all transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"}`, children: c.value })
                 ] })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedArrowStyle : c.arrowStyle}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" }) })
