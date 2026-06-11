@@ -88,7 +88,7 @@ export function Footer() {
               className="h-11 w-11 rounded-full object-contain border border-accent-blue/20 bg-card shadow-soft"
             />
             <div className="flex flex-col items-start gap-1">
-              <span className="text-xl font-bold tracking-tight text-foreground/90 font-sans leading-none">
+              <span className="text-xl font-bold tracking-tight text-accent-blue font-sans leading-none">
                 Junior Junction
               </span>
               <svg viewBox="0 0 100 16" className="w-[76px] h-3 text-accent-red mt-0.5">

@@ -184,7 +184,7 @@ function SplashIntro({ onComplete }) {
     }
   );
 }
-const appCss = "/assets/styles-B1KEkQFc.css";
+const appCss = "/assets/styles-UWbrU66Z.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -448,7 +448,7 @@ function Footer() {
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-start gap-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl font-bold tracking-tight text-foreground/90 font-sans leading-none", children: "Junior Junction" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl font-bold tracking-tight text-accent-blue font-sans leading-none", children: "Junior Junction" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { viewBox: "0 0 100 16", className: "w-[76px] h-3 text-accent-red mt-0.5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M 6,3 Q 50,13 94,3", fill: "none", stroke: "currentColor", strokeWidth: "3.5", strokeLinecap: "round" }) })
           ] })
         ] }),
@@ -781,7 +781,7 @@ const Route$2 = createFileRoute("/celebrations")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-2-jLtTFm.mjs");
+const $$splitComponentImporter$1 = () => import("./about-B1jWiA69.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -799,7 +799,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-CgMeGIEs.mjs");
+const $$splitComponentImporter = () => import("./index-D7DIfbeZ.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

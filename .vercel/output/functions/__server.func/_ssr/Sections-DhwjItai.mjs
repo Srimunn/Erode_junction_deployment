@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-aDKbTN5E.mjs";
+import { l as logoImg } from "./router-C3lDw9Il.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -204,28 +204,84 @@ function WhyChooseSection() {
 }
 const testimonials = [
   {
-    name: "Priya R.",
-    role: "Parent of Aanya, UKG",
-    text: "My daughter sings about school every morning. The teachers are so warm and the activities keep her excited to learn.",
+    name: "Kavitha Natarajan",
+    role: "Parent · 2 months ago",
+    text: "As a mother, when you entrust your child to a new place with new people, there is such fear in your mind, and I too was very afraid when I enrolled my two-year-old twin sons in this school. But within two or three days, I could feel the kindness of the teachers and chair women of this school, who take care of the children with love and instill good qualities in them. Every evening, when I pick up the children from school, I feel relieved to see the children's smiling faces.... THANK YOU SO MUCH TO ALL",
     rating: 5,
-    initials: "PR",
+    initials: "KN",
     badgeColor: "text-accent-red bg-accent-red/[0.08] border-accent-red/15"
   },
   {
-    name: "Karthik M.",
-    role: "Parent of Vihaan, LKG",
-    text: "Beautiful campus and a team that truly knows each child. Junior Junction feels like a second home for our son.",
+    name: "Yuva Raj",
+    role: "Parent · 4 months ago",
+    text: "We are very satisfied. Our child always gets good opportunities to explore and progress in all aspects. The school has been successful in striking an appropriate balance between Academic and Co-Curricular activities.",
     rating: 5,
-    initials: "KM",
+    initials: "YR",
     badgeColor: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15"
   },
   {
-    name: "Divya S.",
-    role: "Parent of Meera, Pre-KG",
-    text: "From the safe environment to the thoughtful curriculum, every detail shows how much they care. Highly recommend.",
+    name: "Aathi Ammu",
+    role: "Parent · 9 months ago",
+    text: "I am very happy to see my daughter now because if she learns some discipline and skills well, I will appreciate Junior Junction Play School and their teacher for that education And I really appreciate their teacher because the way they teach each activity is so amazing. They come forward to showcase the potential of each child thanking to Junior junction play school 💯😊",
     rating: 5,
-    initials: "DS",
+    initials: "AA",
     badgeColor: "text-emerald-600 bg-emerald-500/[0.08] border-emerald-500/15"
+  },
+  {
+    name: "surya madheswaran",
+    role: "Parent · 4 months ago",
+    text: "My son going to this school for last 5 months. Staffs are so Friendly and taking good care of childrens.They are Keeping Different Activities time to time for Kids which my son is enjoying so much.They Engage Every Kids in all Activities like Sports,Dance.So far Good experience.",
+    rating: 5,
+    initials: "SM",
+    badgeColor: "text-indigo-600 bg-indigo-500/[0.08] border-indigo-500/15"
+  },
+  {
+    name: "M Santhoshkumar",
+    role: "Parent · 9 months ago",
+    text: "Best day care of erode comfortable of time on day care wonderful experience in our child such a best day care play school staffs was very sweet and care of my baby I got a good desition of the scholl conviniant of the fees structure..... ❤️❤️❤️❤️❤️❤️❤️‍❤️",
+    rating: 5,
+    initials: "MS",
+    badgeColor: "text-amber-600 bg-amber-500/[0.08] border-amber-500/15"
+  },
+  {
+    name: "Uvanycia",
+    role: "Parent · 9 months ago",
+    text: "A safe and friendly place for kids. The teachers are caring, activities are fun, and it really helps with overall growth.",
+    rating: 5,
+    initials: "UV",
+    badgeColor: "text-rose-500 bg-rose-500/[0.08] border-rose-500/15"
+  },
+  {
+    name: "Nirmala Manoj",
+    role: "Parent · 9 months ago",
+    text: "I feel safe and secure in school, and the education quality has improved significantly, making me very satisfied.",
+    rating: 5,
+    initials: "NM",
+    badgeColor: "text-accent-red bg-accent-red/[0.08] border-accent-red/15"
+  },
+  {
+    name: "Ayisha rishad",
+    role: "Parent · 9 months ago",
+    text: "This school ambiance is too comfortable for the children mentally and physically development, and also the staffs and management are such nice......",
+    rating: 5,
+    initials: "AR",
+    badgeColor: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15"
+  },
+  {
+    name: "sugan deiva",
+    role: "Parent · 3 years ago",
+    text: "Very dedicated personal care. Never felt that we left him at daycare. They were treating him as a family guy and much felt satisfied while leaving him there and concentrated on work. We wish for the successful journey💐‍😍👍",
+    rating: 5,
+    initials: "SD",
+    badgeColor: "text-emerald-600 bg-emerald-500/[0.08] border-emerald-500/15"
+  },
+  {
+    name: "Snow",
+    role: "Parent · 2 years ago",
+    text: "The mom can feel 100 % safe and happy about their kids.thank u so much for your service.",
+    rating: 5,
+    initials: "SN",
+    badgeColor: "text-indigo-600 bg-indigo-500/[0.08] border-indigo-500/15"
   }
 ];
 function TestimonialsSection() {
@@ -283,7 +339,7 @@ function TestimonialsSection() {
                     return /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
-                        className: "w-full shrink-0 flex flex-col justify-between min-h-[220px] sm:min-h-[180px] px-1",
+                        className: "w-full shrink-0 flex flex-col justify-between min-h-[350px] sm:min-h-[220px] px-1",
                         children: [
                           /* @__PURE__ */ jsxRuntimeExports.jsxs(
                             motion.div,
