@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-Cp6g--xJ.mjs";
+import { l as logoImg } from "./router-BcmXqz92.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -431,12 +431,12 @@ function LocationsSection() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-muted-foreground/85 text-base sm:text-lg font-light leading-relaxed", children: "Locate and explore our child-friendly preschool branches in Erode" })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto items-stretch", children: campusData.map((loc) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid gap-2 min-[400px]:gap-3.5 md:gap-8 grid-cols-2 max-w-6xl mx-auto items-stretch", children: campusData.map((loc) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
         motion.div,
         {
           whileHover: { y: -8 },
           transition: { type: "spring", stiffness: 120, damping: 18 },
-          className: "group relative rounded-2xl sm:rounded-[36px] border-2 sm:border-[6px] golden-border bg-white p-4 sm:p-8 shadow-soft hover:shadow-float flex flex-col justify-between overflow-hidden text-left min-w-0",
+          className: "group relative rounded-2xl sm:rounded-[36px] border-2 sm:border-[6px] golden-border bg-white p-2 min-[400px]:p-3.5 sm:p-8 shadow-soft hover:shadow-float flex flex-col justify-between overflow-hidden text-left min-w-0",
           children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "div",
@@ -446,11 +446,11 @@ function LocationsSection() {
               }
             ),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-row items-center justify-between gap-4 mb-4 sm:mb-6", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base sm:text-2xl font-black tracking-tight text-foreground/90 leading-tight", children: loc.title }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block rounded-full px-2.5 py-0.5 sm:px-3.5 sm:py-1 text-[8px] sm:text-[10px] font-extrabold uppercase tracking-wider self-center ${loc.badgeStyle}`, children: loc.badge })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col min-[450px]:flex-row min-[450px]:items-center justify-between gap-1 mb-2.5 sm:mb-6", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-[10px] min-[400px]:text-xs min-[450px]:text-sm sm:text-2xl font-black tracking-tight text-foreground/90 leading-tight", children: loc.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block rounded-full px-1.5 py-0.5 sm:px-3.5 sm:py-1 text-[7px] sm:text-[10px] font-extrabold uppercase tracking-wider self-start min-[450px]:self-auto ${loc.badgeStyle}`, children: loc.badge })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] mb-4 sm:mb-6 shadow-inner border border-border/50 bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] mb-2.5 sm:mb-6 shadow-inner border border-border/50 bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "iframe",
                 {
                   src: loc.embedUrl,
@@ -464,28 +464,28 @@ function LocationsSection() {
                   className: "w-full h-full"
                 }
               ) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-1.5 mb-4 sm:mb-6", children: loc.features.map((feat, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1 text-[9px] sm:text-xs font-bold px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-soft/50 text-muted-foreground border border-border/30", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-1 mb-2.5 sm:mb-6", children: loc.features.map((feat, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1 text-[8px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-3 sm:py-1.5 rounded-lg bg-soft/50 text-muted-foreground border border-border/30", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "h-2.5 w-2.5 sm:h-3 sm:w-3 text-amber-500 shrink-0" }),
                 feat
               ] }, i)) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 sm:space-y-4 pt-4 sm:pt-5 border-t border-border/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2 sm:gap-4 items-start", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-8 w-8 sm:h-9 sm:w-9 shrink-0 place-items-center rounded-lg bg-muted/50 text-xs sm:text-base ${loc.pinColor}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-4 w-4 sm:h-5 sm:w-5" }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 sm:space-y-4 pt-2.5 sm:pt-5 border-t border-border/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-1.5 sm:gap-4 items-start", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-6 w-6 sm:h-9 sm:w-9 shrink-0 place-items-center rounded-lg bg-muted/50 text-xs sm:text-base ${loc.pinColor}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-3.5 w-3.5 sm:h-5 sm:w-5" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs sm:text-sm font-bold text-foreground/80 leading-normal sm:leading-relaxed", children: loc.address }),
-                  loc.landmark && /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-1.5 font-bold", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[8px] min-[400px]:text-[9px] sm:text-sm font-bold text-foreground/80 leading-normal sm:leading-relaxed", children: loc.address }),
+                  loc.landmark && /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[7px] min-[400px]:text-[8px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1.5 font-bold", children: [
                     "Landmark: ",
                     loc.landmark
                   ] })
                 ] })
               ] }) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 sm:space-y-3 pt-4 sm:pt-5 border-t border-border/40", children: loc.contacts.map((contact, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2 sm:gap-4 items-center", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-8 w-8 sm:h-9 sm:w-9 shrink-0 place-items-center rounded-lg bg-muted/50 ${contact.type === "whatsapp" ? "text-emerald-600" : "text-accent-blue"}`, children: contact.type === "whatsapp" ? /* @__PURE__ */ jsxRuntimeExports.jsx(WhatsAppIcon, { className: "h-4 w-4 sm:h-5 sm:w-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4 sm:h-5 sm:w-5" }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-xs sm:text-sm font-bold text-foreground/85 flex items-center w-full", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[10px] sm:text-xs font-semibold text-muted-foreground w-[72px] min-[400px]:w-[82px] sm:w-[130px] shrink-0", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-1.5 sm:space-y-3 pt-2.5 sm:pt-5 border-t border-border/40", children: loc.contacts.map((contact, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-1.5 sm:gap-4 items-start", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-6 w-6 sm:h-9 sm:w-9 shrink-0 place-items-center rounded-lg bg-muted/50 ${contact.type === "whatsapp" ? "text-emerald-600" : "text-accent-blue"}`, children: contact.type === "whatsapp" ? /* @__PURE__ */ jsxRuntimeExports.jsx(WhatsAppIcon, { className: "h-3.5 w-3.5 sm:h-5 sm:w-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-3.5 w-3.5 sm:h-5 sm:w-5" }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[8px] min-[400px]:text-[9px] sm:text-sm font-bold text-foreground/85 flex flex-col sm:flex-row sm:items-start md:items-center w-full", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[7px] min-[400px]:text-[8px] sm:text-xs font-semibold text-muted-foreground w-auto sm:w-[130px] shrink-0", children: [
                     contact.label,
                     ":"
                   ] }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 flex flex-col sm:flex-row sm:items-center gap-x-1 sm:gap-x-2 gap-y-0.5", children: contact.values.map((val, valIdx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 flex flex-col sm:flex-row sm:items-start md:items-center gap-x-1 sm:gap-x-2 gap-y-0.5 mt-0.5 sm:mt-0", children: contact.values.map((val, valIdx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx(
                       "a",
                       {
@@ -501,17 +501,17 @@ function LocationsSection() {
                 ] })
               ] }, idx)) })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 sm:mt-8 pt-4 sm:pt-6 border-t border-border/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2.5 sm:mt-8 pt-2.5 sm:pt-6 border-t border-border/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "a",
               {
                 href: loc.mapUrl,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: `w-full inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-4 py-3 sm:px-6 sm:py-4 text-xs sm:text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`,
+                className: `w-full inline-flex items-center justify-center gap-1 sm:gap-2 rounded-full px-2 py-2 sm:px-6 sm:py-4 text-[8px] min-[400px]:text-[10px] sm:text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`,
                 children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(Navigation, { className: "h-4 w-4 sm:h-5 sm:w-5 animate-pulse" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Navigation, { className: "h-3.5 w-3.5 sm:h-5 sm:w-5 animate-pulse" }),
                   "Get Navigation Map",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "h-3.5 w-3.5 sm:h-4 sm:w-4 ml-0.5 sm:ml-1" })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "h-3 w-3 sm:h-4 sm:w-4 ml-0.5 sm:ml-1" })
                 ]
               }
             ) })

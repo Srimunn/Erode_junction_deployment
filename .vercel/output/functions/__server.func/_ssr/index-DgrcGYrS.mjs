@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { T as TestimonialsSection } from "./Sections-BZXeslhC.mjs";
+import { T as TestimonialsSection } from "./Sections-CQlKFZpZ.mjs";
 import { S as Sparkles, H as Heart, e as ArrowRight } from "../_libs/lucide-react.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import "../_libs/tanstack__router-core.mjs";
@@ -16,7 +16,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-import "./router-Cp6g--xJ.mjs";
+import "./router-BcmXqz92.mjs";
 import "../_libs/tanstack__query-core.mjs";
 import "../_libs/tanstack__react-query.mjs";
 import "../_libs/motion-dom.mjs";
