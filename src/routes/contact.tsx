@@ -154,8 +154,8 @@ function ContactPage() {
           {/* Left Cards Block (40% width) */}
           <div className="lg:col-span-5 space-y-10 px-2">
 
-            {/* Header Segment (Left-Aligned) */}
-            <div className="text-left space-y-4">
+            {/* Header Segment (Centered on mobile, Left-Aligned on desktop) */}
+            <div className="text-center lg:text-left space-y-4">
               <motion.h1
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
