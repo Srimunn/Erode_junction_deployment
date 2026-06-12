@@ -722,6 +722,20 @@ export function LocationsSection() {
                 </div>
               </div>
 
+              {/* Navigation CTA button */}
+              <div className="mt-2.5 sm:mt-8 pt-2.5 sm:pt-6 border-t border-border/40">
+                <a
+                  href={loc.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full inline-flex items-center justify-center gap-1 sm:gap-2 rounded-full px-2 py-2 sm:px-6 sm:py-4 text-[8px] min-[400px]:text-[10px] sm:text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`}
+                >
+                  <Navigation className="h-3.5 w-3.5 sm:h-5 sm:w-5 animate-pulse" />
+                  Get Navigation Map
+                  <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 ml-0.5 sm:ml-1" />
+                </a>
+              </div>
+
             </motion.div>
           ))}
         </div>

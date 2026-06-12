@@ -1,8 +1,8 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-BP4hH1BO.mjs";
+import { l as logoImg } from "./router-DNFge9q6.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
-import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
+import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
 const pencileImg = "/assets/pencile-BInX2rPR.webp";
 function WhatsAppIcon({ className }) {
@@ -540,7 +540,21 @@ function LocationsSection() {
                   ] }, valIdx)) })
                 ] })
               ] }, idx)) })
-            ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2.5 sm:mt-8 pt-2.5 sm:pt-6 border-t border-border/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "a",
+              {
+                href: loc.mapUrl,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: `w-full inline-flex items-center justify-center gap-1 sm:gap-2 rounded-full px-2 py-2 sm:px-6 sm:py-4 text-[8px] min-[400px]:text-[10px] sm:text-base font-extrabold text-white shadow-soft transition-all duration-300 hover:scale-[1.03] cursor-pointer hover:shadow-card ${loc.buttonStyle}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Navigation, { className: "h-3.5 w-3.5 sm:h-5 sm:w-5 animate-pulse" }),
+                  "Get Navigation Map",
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "h-3 w-3 sm:h-4 sm:w-4 ml-0.5 sm:ml-1" })
+                ]
+              }
+            ) })
           ]
         },
         loc.id
