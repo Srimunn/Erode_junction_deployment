@@ -597,8 +597,8 @@ export function LocationsSection() {
       pinColor: "text-accent-blue",
       features: ["Near PP Scaans", "Smart Classrooms", "Activity Center"],
       contacts: [
-        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["97882 09034"], hrefs: ["https://wa.me/919788209034"] },
-        { type: "landline", label: "Landline", values: ["0424 420 4777"], hrefs: ["tel:+914244204777"] }
+        { type: "whatsapp", label: "WhatsApp/Mobile", values: ["94428 95057"], hrefs: ["https://wa.me/919442895057"] },
+        { type: "landline", label: "Landline", values: ["0424 420 8777"], hrefs: ["tel:+914244208777"] }
       ]
     }
   ];
