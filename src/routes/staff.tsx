@@ -91,7 +91,7 @@ const teamStaff: readonly StaffMember[] = [
   },
   {
     id: 6,
-    name: "Mrs. Ayisha Nihara",
+    name: "Mrs.S.Ayisha Nishana",
     role: "Montessori Teacher",
     qualifications: [
       "B.A. (English)",
