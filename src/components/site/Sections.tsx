@@ -589,7 +589,7 @@ export function LocationsSection() {
       badge: "Activity Branch",
       address: "No. 530, Kuppanna Street, Perundurai Road, Near PP Scaans, Edayankattuvalasu, Erode - 638011",
       landmark: "Near PP Scaans",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=No.+530%2C+Kuppanna+Street%2C+Perundurai+Road%2C+Near+PP+Scaans%2C+Edayankattuvalasu%2C+Erode+-+638011",
+      mapUrl: "https://maps.app.goo.gl/2943ZaziEiQLJewJ6?g_st=aw",
       embedUrl: "https://maps.google.com/maps?q=530,%20Kuppanna%20Street,%20Perundurai%20Road,%20Near%20PP%20Scaans,%20Edayankattuvalasu,%20Erode%20638011&t=&z=15&ie=UTF8&iwloc=&output=embed",
       accentColor: "accent-blue",
       badgeStyle: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15",

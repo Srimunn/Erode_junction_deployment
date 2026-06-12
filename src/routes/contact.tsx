@@ -267,7 +267,7 @@ function ContactPage() {
                           }`}>
                           {c.label}
                         </span>
-                        <div className={`text-xs min-[375px]:text-sm sm:text-base font-bold leading-tight break-all transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"
+                        <div className={`text-[10px] min-[360px]:text-xs min-[375px]:text-sm sm:text-base font-bold leading-tight whitespace-nowrap transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"
                           }`}>
                           {c.value}
                         </div>

@@ -184,7 +184,7 @@ function SplashIntro({ onComplete }) {
     }
   );
 }
-const appCss = "/assets/styles-BM86ravS.css";
+const appCss = "/assets/styles-B2TBSjrX.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -745,7 +745,7 @@ const Route$4 = createFileRoute("/events")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./contact-CJsHr_ti.mjs");
+const $$splitComponentImporter$3 = () => import("./contact-gKErf2uL.mjs");
 const Route$3 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -781,7 +781,7 @@ const Route$2 = createFileRoute("/celebrations")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-DH2tkP6N.mjs");
+const $$splitComponentImporter$1 = () => import("./about-CDr2WLZY.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -799,7 +799,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-BRBEy07R.mjs");
+const $$splitComponentImporter = () => import("./index-DZgWOKmN.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{
