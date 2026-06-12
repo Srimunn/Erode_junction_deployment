@@ -60,7 +60,7 @@ export function Navbar() {
                 Junior Junction
               </span>
               <span
-                className="text-[8px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-accent-red uppercase mt-1 ml-0.5 sm:ml-1 leading-none opacity-0 animate-fade-in-left hidden min-[375px]:block"
+                className="text-[8px] sm:text-[10px] font-bold tracking-[0.2em] sm:tracking-[0.25em] text-accent-red uppercase mt-1 ml-0.5 sm:ml-1 leading-none opacity-0 animate-fade-in-left block"
                 style={{ animationDelay: "450ms", animationFillMode: "forwards" }}
               >
                 PLAYSCHOOL, ERODE

@@ -114,7 +114,7 @@ export function AboutSection() {
         {/* Right Column: Upgraded Content Card Grid */}
         <div className="flex flex-col items-start text-left w-full min-w-0">
           <h2 className="text-2xl min-[400px]:text-3xl sm:text-5xl font-extrabold tracking-tight leading-[1.15] text-foreground/95">
-            About <span className="italic text-accent-blue font-sans">Junior Junction</span>
+            About <span className="italic text-accent-blue font-sans">Junior Junction</span> <span className="text-accent-red block sm:inline-block sm:ml-2">Playschool, Erode</span>
           </h2>
           <p className="mt-3 sm:mt-6 text-sm sm:text-lg text-muted-foreground/80 leading-relaxed font-light">
             A safe, nurturing, and activity-based preschool in the heart of Erode. We blend play,

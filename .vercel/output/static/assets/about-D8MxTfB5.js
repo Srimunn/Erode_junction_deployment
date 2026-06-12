@@ -1,0 +1,1 @@
+import{j as o}from"./index-_siMPctj.js";import{A as t,L as s,W as i}from"./Sections-CIlz6Kaw.js";import"./graduation-cap-mmhr7ea0.js";import"./sparkles-QgKj3MkP.js";import"./arrow-right-BFPfbne1.js";function p(){return o.jsxs("div",{className:"pt-28",children:[o.jsx(t,{}),o.jsx(s,{}),o.jsx(i,{})]})}export{p as component};
