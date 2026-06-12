@@ -686,7 +686,7 @@ function RootComponent() {
     )
   ] }) }) });
 }
-const $$splitComponentImporter$5 = () => import("./staff-B73Q_B6I.mjs");
+const $$splitComponentImporter$5 = () => import("./staff-CgoJ0YIi.mjs");
 const Route$6 = createFileRoute("/staff")({
   head: () => ({
     meta: [{
@@ -781,7 +781,7 @@ const Route$2 = createFileRoute("/celebrations")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-q9tEkhCr.mjs");
+const $$splitComponentImporter$1 = () => import("./about-DH2tkP6N.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -799,7 +799,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-BbK4F_Ae.mjs");
+const $$splitComponentImporter = () => import("./index-BRBEy07R.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

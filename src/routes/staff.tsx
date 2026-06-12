@@ -180,7 +180,7 @@ function StaffPage() {
           className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-neutral-800 leading-tight"
         >
           Meet the Team Behind <br />
-          Our <span className="text-accent-blue font-light italic">Junior Junction</span> <span className="text-accent-red block sm:inline-block sm:ml-2">Playschool, Erode</span>
+          Our <span className="text-accent-blue font-bold italic">Junior Junction</span> <span className="text-accent-red block sm:inline-block sm:ml-2">Playschool, Erode</span>
         </motion.h1>
       </header>
 

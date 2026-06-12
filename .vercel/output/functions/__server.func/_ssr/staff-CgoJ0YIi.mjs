@@ -125,7 +125,7 @@ function StaffPage() {
       "Meet the Team Behind ",
       /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
       "Our ",
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-accent-blue font-light italic", children: "Junior Junction" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-accent-blue font-bold italic", children: "Junior Junction" }),
       " ",
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-accent-red block sm:inline-block sm:ml-2", children: "Playschool, Erode" })
     ] }) }),
