@@ -650,14 +650,12 @@ export function LocationsSection() {
                 <div className="relative rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] mb-2.5 sm:mb-6 shadow-inner border border-border/50 bg-muted">
                   <iframe
                     src={loc.embedUrl}
-                    width="100%"
-                    height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`${loc.title} Map Location`}
-                    className="w-full h-full"
+                    className="absolute -top-12 -left-32 w-[calc(100%+256px)] h-[calc(100%+96px)] max-w-none"
                   />
                 </div>
 

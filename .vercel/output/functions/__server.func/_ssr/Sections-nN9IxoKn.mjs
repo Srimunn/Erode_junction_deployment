@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-C8-Rf4Nx.mjs";
+import { l as logoImg } from "./router-BP4hH1BO.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -496,14 +496,12 @@ function LocationsSection() {
                 "iframe",
                 {
                   src: loc.embedUrl,
-                  width: "100%",
-                  height: "100%",
                   style: { border: 0 },
                   allowFullScreen: false,
                   loading: "lazy",
                   referrerPolicy: "no-referrer-when-downgrade",
                   title: `${loc.title} Map Location`,
-                  className: "w-full h-full"
+                  className: "absolute -top-12 -left-32 w-[calc(100%+256px)] h-[calc(100%+96px)] max-w-none"
                 }
               ) }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-1 mb-2.5 sm:mb-6", children: loc.features.map((feat, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-1 text-[8px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-3 sm:py-1.5 rounded-lg bg-soft/50 text-muted-foreground border border-border/30", children: [
