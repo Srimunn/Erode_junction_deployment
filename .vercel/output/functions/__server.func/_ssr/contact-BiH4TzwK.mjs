@@ -75,7 +75,7 @@ function ContactPage() {
     setSent(false);
     setErrors({});
   };
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative px-4 pb-8 pt-24 sm:pt-32 overflow-hidden", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative pl-3 pr-5 sm:px-4 pb-8 pt-24 sm:pt-32 overflow-hidden", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 pointer-events-none overflow-hidden select-none -z-10", children: [...Array(5)].map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(motion.div, { className: "absolute text-accent-blue/10", style: {
       left: `${15 + i * 18}%`,
       top: `${10 + i % 2 * 35}%`
@@ -120,48 +120,48 @@ function ContactPage() {
             label: "Call Us",
             value: "0424 420 4777",
             color: "bg-red-50/80 text-accent-red shadow-[0_0_15px_rgba(239,68,68,0.1)] group-hover:scale-105 transition-all duration-300",
-            arrowStyle: "w-12 h-12 rounded-full bg-gradient-to-br from-red-50 to-orange-50 text-accent-red shadow-[0_4px_12px_rgba(239,68,68,0.08)] border border-red-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(239,68,68,0.15)] transition-all duration-500",
+            arrowStyle: "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-red-50 to-orange-50 text-accent-red shadow-[0_4px_12px_rgba(239,68,68,0.08)] border border-red-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(239,68,68,0.15)] transition-all duration-500",
             href: "tel:+914244204777",
             cardStyle: "bg-white/60 border-white/80 hover:border-accent-red/35 hover:shadow-[0_15px_35px_rgba(239,68,68,0.08)]",
             selectedBg: "bg-white/95 border-accent-red/40 shadow-[0_15px_30px_rgba(239,68,68,0.12)] scale-[1.01]",
             selectedIconColor: "bg-accent-red/10 text-accent-red ring-4 ring-accent-red/5 scale-105",
             selectedLabelColor: "text-accent-red/80",
             selectedValColor: "text-foreground font-extrabold",
-            selectedArrowStyle: "w-12 h-12 rounded-full bg-gradient-to-br from-red-100 to-orange-100/90 text-accent-red border border-red-300/45 shadow-[0_8px_22px_rgba(239,68,68,0.2)] scale-110 rotate-12 transition-all duration-500"
+            selectedArrowStyle: "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-red-100 to-orange-100/90 text-accent-red border border-red-300/45 shadow-[0_8px_22px_rgba(239,68,68,0.2)] scale-110 rotate-12 transition-all duration-500"
           }, {
             icon: Mail,
             label: "Email Us",
             value: "juniorjunctionerode@gmail.com",
             color: "bg-blue-50/80 text-accent-blue shadow-[0_0_15px_rgba(15,126,188,0.1)] group-hover:scale-105 transition-all duration-300",
-            arrowStyle: "w-12 h-12 rounded-full bg-gradient-to-br from-blue-50 to-cyan-50 text-accent-blue shadow-[0_4px_12px_rgba(15,126,188,0.08)] border border-blue-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(15,126,188,0.15)] transition-all duration-500",
+            arrowStyle: "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-50 to-cyan-50 text-accent-blue shadow-[0_4px_12px_rgba(15,126,188,0.08)] border border-blue-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(15,126,188,0.15)] transition-all duration-500",
             href: "mailto:juniorjunctionerode@gmail.com",
             cardStyle: "bg-white/60 border-white/80 hover:border-accent-blue/35 hover:shadow-[0_15px_35px_rgba(15,126,188,0.08)]",
             selectedBg: "bg-white/95 border-accent-blue/40 shadow-[0_15px_30px_rgba(15,126,188,0.12)] scale-[1.01]",
             selectedIconColor: "bg-accent-blue/10 text-accent-blue ring-4 ring-accent-blue/5 scale-105",
             selectedLabelColor: "text-accent-blue/80",
             selectedValColor: "text-foreground font-extrabold",
-            selectedArrowStyle: "w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100/90 text-accent-blue border border-blue-300/45 shadow-[0_8px_22px_rgba(15,126,188,0.2)] scale-110 rotate-12 transition-all duration-500"
+            selectedArrowStyle: "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100/90 text-accent-blue border border-blue-300/45 shadow-[0_8px_22px_rgba(15,126,188,0.2)] scale-110 rotate-12 transition-all duration-500"
           }, {
             icon: WhatsAppIcon,
             label: "WhatsApp Support",
             value: "Chat on +91 97882 09034",
             color: "bg-emerald-50/80 text-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.1)] group-hover:scale-105 transition-all duration-300",
-            arrowStyle: "w-12 h-12 rounded-full bg-gradient-to-br from-emerald-50 to-lime-50 text-emerald-600 shadow-[0_4px_12px_rgba(16,185,129,0.08)] border border-emerald-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(16,185,129,0.15)] transition-all duration-500",
+            arrowStyle: "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-emerald-50 to-lime-50 text-emerald-600 shadow-[0_4px_12px_rgba(16,185,129,0.08)] border border-emerald-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(16,185,129,0.15)] transition-all duration-500",
             href: "https://wa.me/919788209034",
             cardStyle: "bg-white/60 border-white/80 hover:border-emerald-500/35 hover:shadow-[0_15px_35px_rgba(16,185,129,0.08)]",
             selectedBg: "bg-white/95 border-emerald-500/40 shadow-[0_15px_30px_rgba(16,185,129,0.12)] scale-[1.01]",
             selectedIconColor: "bg-emerald-500/10 text-emerald-500 ring-4 ring-emerald-500/5 scale-105",
             selectedLabelColor: "text-emerald-600/80",
             selectedValColor: "text-foreground font-extrabold",
-            selectedArrowStyle: "w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-lime-100/90 text-emerald-600 border border-emerald-300/45 shadow-[0_8px_22px_rgba(16,185,129,0.2)] scale-110 rotate-12 transition-all duration-500"
+            selectedArrowStyle: "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-emerald-100 to-lime-100/90 text-emerald-600 border border-emerald-300/45 shadow-[0_8px_22px_rgba(16,185,129,0.2)] scale-110 rotate-12 transition-all duration-500"
           }].map((c, i) => {
             const isSelected = selectedCard === i;
             return /* @__PURE__ */ jsxRuntimeExports.jsxs(motion.a, { href: c.href, target: "_blank", rel: "noopener noreferrer", variants: cardItemVariants, whileHover: {
               y: -6,
               scale: 1.015
-            }, onClick: () => setSelectedCard(isSelected ? null : i), className: `backdrop-blur-xl border rounded-[28px] p-4 sm:p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group min-w-0 ${isSelected ? c.selectedBg : c.cardStyle}`, children: [
+            }, onClick: () => setSelectedCard(isSelected ? null : i), className: `backdrop-blur-xl border rounded-[28px] p-3.5 sm:p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group min-w-0 ${isSelected ? c.selectedBg : c.cardStyle}`, children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 sm:gap-4 min-w-0 flex-1", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-12 w-12 shrink-0 place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedIconColor : c.color}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(c.icon, { className: "h-5.5 w-5.5" }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `grid h-10 w-10 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedIconColor : c.color}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(c.icon, { className: "h-5.5 w-5.5" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-0.5 min-w-0 flex-1", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[10px] font-extrabold uppercase tracking-wider block transition-all duration-300 ${isSelected ? c.selectedLabelColor : "text-muted-foreground/60"}`, children: c.label }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-[10px] min-[360px]:text-xs min-[375px]:text-sm sm:text-base font-bold leading-tight whitespace-nowrap transition-all duration-300 ${isSelected ? c.selectedValColor : "text-foreground/80"}`, children: c.value })

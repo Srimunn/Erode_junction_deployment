@@ -114,7 +114,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="relative px-4 pb-8 pt-24 sm:pt-32 overflow-hidden">
+    <div className="relative pl-3 pr-5 sm:px-4 pb-8 pt-24 sm:pt-32 overflow-hidden">
       {/* Background Decorative floating elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none -z-10">
 
@@ -190,7 +190,7 @@ function ContactPage() {
                   color:
                     "bg-red-50/80 text-accent-red shadow-[0_0_15px_rgba(239,68,68,0.1)] group-hover:scale-105 transition-all duration-300",
                   arrowStyle:
-                    "w-12 h-12 rounded-full bg-gradient-to-br from-red-50 to-orange-50 text-accent-red shadow-[0_4px_12px_rgba(239,68,68,0.08)] border border-red-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(239,68,68,0.15)] transition-all duration-500",
+                    "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-red-50 to-orange-50 text-accent-red shadow-[0_4px_12px_rgba(239,68,68,0.08)] border border-red-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(239,68,68,0.15)] transition-all duration-500",
                   href: "tel:+914244204777",
                   cardStyle:
                     "bg-white/60 border-white/80 hover:border-accent-red/35 hover:shadow-[0_15px_35px_rgba(239,68,68,0.08)]",
@@ -201,7 +201,7 @@ function ContactPage() {
                   selectedLabelColor: "text-accent-red/80",
                   selectedValColor: "text-foreground font-extrabold",
                   selectedArrowStyle:
-                    "w-12 h-12 rounded-full bg-gradient-to-br from-red-100 to-orange-100/90 text-accent-red border border-red-300/45 shadow-[0_8px_22px_rgba(239,68,68,0.2)] scale-110 rotate-12 transition-all duration-500",
+                    "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-red-100 to-orange-100/90 text-accent-red border border-red-300/45 shadow-[0_8px_22px_rgba(239,68,68,0.2)] scale-110 rotate-12 transition-all duration-500",
                 },
                 {
                   icon: Mail,
@@ -210,7 +210,7 @@ function ContactPage() {
                   color:
                     "bg-blue-50/80 text-accent-blue shadow-[0_0_15px_rgba(15,126,188,0.1)] group-hover:scale-105 transition-all duration-300",
                   arrowStyle:
-                    "w-12 h-12 rounded-full bg-gradient-to-br from-blue-50 to-cyan-50 text-accent-blue shadow-[0_4px_12px_rgba(15,126,188,0.08)] border border-blue-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(15,126,188,0.15)] transition-all duration-500",
+                    "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-50 to-cyan-50 text-accent-blue shadow-[0_4px_12px_rgba(15,126,188,0.08)] border border-blue-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(15,126,188,0.15)] transition-all duration-500",
                   href: "mailto:juniorjunctionerode@gmail.com",
                   cardStyle:
                     "bg-white/60 border-white/80 hover:border-accent-blue/35 hover:shadow-[0_15px_35px_rgba(15,126,188,0.08)]",
@@ -221,7 +221,7 @@ function ContactPage() {
                   selectedLabelColor: "text-accent-blue/80",
                   selectedValColor: "text-foreground font-extrabold",
                   selectedArrowStyle:
-                    "w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100/90 text-accent-blue border border-blue-300/45 shadow-[0_8px_22px_rgba(15,126,188,0.2)] scale-110 rotate-12 transition-all duration-500",
+                    "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100/90 text-accent-blue border border-blue-300/45 shadow-[0_8px_22px_rgba(15,126,188,0.2)] scale-110 rotate-12 transition-all duration-500",
                 },
                 {
                   icon: WhatsAppIcon,
@@ -230,7 +230,7 @@ function ContactPage() {
                   color:
                     "bg-emerald-50/80 text-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.1)] group-hover:scale-105 transition-all duration-300",
                   arrowStyle:
-                    "w-12 h-12 rounded-full bg-gradient-to-br from-emerald-50 to-lime-50 text-emerald-600 shadow-[0_4px_12px_rgba(16,185,129,0.08)] border border-emerald-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(16,185,129,0.15)] transition-all duration-500",
+                    "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-emerald-50 to-lime-50 text-emerald-600 shadow-[0_4px_12px_rgba(16,185,129,0.08)] border border-emerald-200/30 backdrop-blur-md group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-[0_8px_20px_rgba(16,185,129,0.15)] transition-all duration-500",
                   href: "https://wa.me/919788209034",
                   cardStyle:
                     "bg-white/60 border-white/80 hover:border-emerald-500/35 hover:shadow-[0_15px_35px_rgba(16,185,129,0.08)]",
@@ -241,7 +241,7 @@ function ContactPage() {
                   selectedLabelColor: "text-emerald-600/80",
                   selectedValColor: "text-foreground font-extrabold",
                   selectedArrowStyle:
-                    "w-12 h-12 rounded-full bg-gradient-to-br from-emerald-100 to-lime-100/90 text-emerald-600 border border-emerald-300/45 shadow-[0_8px_22px_rgba(16,185,129,0.2)] scale-110 rotate-12 transition-all duration-500",
+                    "w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-emerald-100 to-lime-100/90 text-emerald-600 border border-emerald-300/45 shadow-[0_8px_22px_rgba(16,185,129,0.2)] scale-110 rotate-12 transition-all duration-500",
                 },
               ].map((c, i) => {
                 const isSelected = selectedCard === i;
@@ -254,11 +254,11 @@ function ContactPage() {
                     variants={cardItemVariants}
                     whileHover={{ y: -6, scale: 1.015 }}
                     onClick={() => setSelectedCard(isSelected ? null : i)}
-                    className={`backdrop-blur-xl border rounded-[28px] p-4 sm:p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group min-w-0 ${isSelected ? c.selectedBg : c.cardStyle
+                    className={`backdrop-blur-xl border rounded-[28px] p-3.5 sm:p-5.5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-between z-10 relative group min-w-0 ${isSelected ? c.selectedBg : c.cardStyle
                       }`}
                   >
                     <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
-                      <div className={`grid h-12 w-12 shrink-0 place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedIconColor : c.color
+                      <div className={`grid h-10 w-10 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-full transition-all duration-300 ${isSelected ? c.selectedIconColor : c.color
                         }`}>
                         <c.icon className="h-5.5 w-5.5" />
                       </div>

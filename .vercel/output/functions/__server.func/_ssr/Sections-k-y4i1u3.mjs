@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { l as logoImg } from "./router-CURQ5ZzS.mjs";
+import { l as logoImg } from "./router-DfGw174O.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { G as GraduationCap, H as Heart, o as ShieldCheck, e as ArrowRight, S as Sparkles, a as MapPin, P as Phone, N as Navigation, E as ExternalLink, p as Monitor, V as Video, q as HeartHandshake, r as Star, s as ArrowLeft } from "../_libs/lucide-react.mjs";
 const aboutImg = "/assets/about-play-sand-pmR9c_b-.jpg";
@@ -431,7 +431,7 @@ function LocationsSection() {
       badge: "Main Branch",
       address: "83/1, 2nd Cross Street, VIP Colony, Palakattu Thottam, Perundurai Road, Erode - 638011",
       landmark: "Opposite Reliance Mall, Behind Zudio",
-      mapUrl: "https://www.google.com/maps/place/Junior+Junction+Play+School/@11.3330611,77.7043799,14.5z/data=!4m6!3m5!1s0x3ba96f197b1f0c6d:0x514eebc84c792277!8m2!3d11.3359045!4d77.7061019!16s%2Fg%2F11trtmq2cn?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D",
+      mapUrl: "https://maps.app.goo.gl/tVjH2CN5qvEtPGpp8?g_st=ac",
       embedUrl: "https://maps.google.com/maps?q=83/1,%202nd%20Cross%20Street,%20VIP%20Colony,%20Palakattu%20Thottam,%20Perundurai%20Road,%20Erode%20638011&t=&z=15&ie=UTF8&iwloc=&output=embed",
       accentColor: "accent-red",
       badgeStyle: "text-accent-red bg-accent-red/[0.08] border-accent-red/15",
@@ -449,7 +449,7 @@ function LocationsSection() {
       badge: "Activity Branch",
       address: "No. 530, Kuppanna Street, Perundurai Road, Near PP Scaans, Edayankattuvalasu, Erode - 638011",
       landmark: "Near PP Scaans",
-      mapUrl: "https://www.google.com/maps/place/JUNIOR+JUNCTION+PLAY+SCHOOL+(2.O)/@11.3404913,77.7143797,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba96f705446729b:0xdb8633721bc78a1e!8m2!3d11.3404913!4d77.7143797!16s%2Fg%2F11zfs2l1rv!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D",
+      mapUrl: "https://maps.app.goo.gl/YcdtxunT3ZjmoKJE7?g_st=ac",
       embedUrl: "https://maps.google.com/maps?q=530,%20Kuppanna%20Street,%20Perundurai%20Road,%20Near%20PP%20Scaans,%20Edayankattuvalasu,%20Erode%20638011&t=&z=15&ie=UTF8&iwloc=&output=embed",
       accentColor: "accent-blue",
       badgeStyle: "text-accent-blue bg-accent-blue/[0.08] border-accent-blue/15",

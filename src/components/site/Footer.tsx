@@ -104,7 +104,7 @@ export function Footer() {
               { Icon: Instagram, href: "https://www.instagram.com/junior_junction_preschool/", color: "hover:bg-pink-500 hover:shadow-pink-500/25", label: "Instagram" },
               { Icon: Facebook, href: "https://www.facebook.com/p/junior_junction_erode-100089342184125/", color: "hover:bg-blue-600 hover:shadow-blue-600/25", label: "Facebook" },
               { Icon: Youtube, href: "https://www.youtube.com/@juniorjunction2907", color: "hover:bg-red-600 hover:shadow-red-600/25", label: "YouTube" },
-              { Icon: MapPin, href: "https://www.google.com/maps/place/Junior+Junction+Play+School/@11.3330611,77.7043799,14.5z/data=!4m6!3m5!1s0x3ba96f197b1f0c6d:0x514eebc84c792277!8m2!3d11.3359045!4d77.7061019!16s%2Fg%2F11trtmq2cn?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D", color: "hover:bg-emerald-600 hover:shadow-emerald-600/25", label: "Google Maps Location" },
+              { Icon: MapPin, href: "https://maps.app.goo.gl/tVjH2CN5qvEtPGpp8?g_st=ac", color: "hover:bg-emerald-600 hover:shadow-emerald-600/25", label: "Google Maps Location" },
             ].map(({ Icon, href, color, label }, i) => (
               <motion.a
                 key={i}
@@ -202,7 +202,7 @@ export function Footer() {
               <li className="flex items-start gap-2.5 py-0.5">
                 <MapPin className="h-4 w-4 text-accent-blue/80 shrink-0 mt-0.5" />
                 <a 
-                  href="https://www.google.com/maps/place/Junior+Junction+Play+School/@11.3330611,77.7043799,14.5z/data=!4m6!3m5!1s0x3ba96f197b1f0c6d:0x514eebc84c792277!8m2!3d11.3359045!4d77.7061019!16s%2Fg%2F11trtmq2cn?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D" 
+                  href="https://maps.app.goo.gl/tVjH2CN5qvEtPGpp8?g_st=ac" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-accent-blue transition-colors duration-200 leading-relaxed"
